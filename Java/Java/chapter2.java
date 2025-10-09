@@ -50,12 +50,14 @@
 //find the value of the following expression
 //int x=7;
 // int a=7*49/7+35/7;
-public class chapter2{
-    public static void main(String[] args) {
-        //  Scanner sc = new Scanner(System.in);
+// public class chapter2{
+//     public static void main(String[] args) {
+//         //  Scanner sc = new Scanner(System.in);
          
-int a=7*49/7+35/7;
-System.out.println(a);
-    }
-}
+// int a=7*49/7+35/7;
+// System.out.println(a);
+//     }
+// }
+
+
 
