@@ -41,7 +41,7 @@ public class chapter4{
 // 4. Question 
 
 import java.util.Scanner;
-public class Main{
+public class chapter4{
   public static void main(String[]args){
     Scanner sc = new Scanner (System.in);
     System.out.println("Enter a number (1-7) for the day of the week:");
@@ -74,7 +74,18 @@ public class Main{
     }
   }
 }
-   
+
+
+
+//wap to verify that if wheter entered year is leap year or not .
+
+public class chapter4{
+  public stastic void main(String[]args)
+  Scanner sc = new scanner (System.in);
+  System.out.println("Enter year :")
+  int year = nextInt();
+
+}
 
 
 
