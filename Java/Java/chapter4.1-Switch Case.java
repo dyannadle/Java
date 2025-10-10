@@ -1,12 +1,22 @@
-public class PairExample {
-    public static void main(String[] args) {
-        int[] num = {2, 3, 1, 5};
- 
-        System.out.println("All unique pairs:");
-        for (int i = 0; i < num.length; i++) {
-            for (int j = i + 1; j < num.length; j++) {
-                System.out.println("(" + num[i] + ", " + num[j] + ")");
-            }
-        }
+
+import java.util.Scanner;
+
+public class cwh_18_elseif {
+public static void main(String[] args) {
+    int age;
+    System.out.println("Enter Your Age");
+    Scanner sc = new Scanner(System.in);
+    age = sc.nextInt();
+    if (age > 60) {
+        System.out.println("You are experienced!");
+    }
+    else if (age > 45) {
+        System.out.println("You are semi-experienced!");
+    }
+    else if (age > 35) {
+        System.out.println("You are semi-semi-experienced!");
+    }
+    else {
+        System.out.println("You are not experienced");
     }
 }
