@@ -1,5 +1,1 @@
-[2025-10-12 20:45:10] Account created with initial deposit: 1500.0
-[2025-10-12 20:45:10] Withdrawal: 1000.0. New balance: 500.0
-[2025-10-12 20:45:10] Withdrawal: 1000.0 + Overdraft Fee: 100.0. New balance: -600.0
-[2025-10-12 20:45:10] Withdrawal: 1000.0 + Overdraft Fee: 100.0. New balance: -1700.0
-[2025-10-12 20:45:10] Applied monthly overdraft interest: -17.0
+[2025-10-12 22:47:17] Account created with initial deposit: 1500.0
