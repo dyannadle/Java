@@ -17,25 +17,26 @@ public class StonePaperScissors {
         System.out.println("\nYou will play " + totalRounds + " rounds against the computer!");
         System.out.println("Enter your choice: stone, paper, or scissors\n");
 
-        for (int round = 1; round <= totalRounds; round++) {
-            System.out.println("Round " + round + ":");
-            System.out.print("Your choice: ");
-            String userChoice = scanner.next().toLowerCase();
+// Game loop
+        for (int round = 1; round <= totalRounds; round++) {// Start of round
+            System.out.println("Round " + round + ":");// Start of round
+            System.out.print("Your choice: ");// User input
+            String userChoice = scanner.next().toLowerCase();// User input
 
             // Validate user input
-            if (!userChoice.equals("stone") && !userChoice.equals("paper") && !userChoice.equals("scissors")) {
-                System.out.println("Invalid choice! Please choose stone, paper, or scissors.");
+            if (!userChoice.equals("stone") && !userChoice.equals("paper") && !userChoice.equals("scissors")) {// Validate user input
+                System.out.println("Invalid choice! Please choose stone, paper, or scissors.");//
                 round--; // repeat the same round
-                continue;
+                continue;   // Skip to next iteration
             }
 
-            String computerChoice = choices[random.nextInt(3)];
-            System.out.println("Computer chose: " + computerChoice);
+            String computerChoice = choices[random.nextInt(3)];// Computer choice
+            System.out.println("Computer chose: " + computerChoice);        // Computer choice
 
             // Determine round winner
-            if (userChoice.equals(computerChoice)) {
+            if (userChoice.equals(computerChoice)) {// Tie condition
                 System.out.println("It's a tie!");
-            } else if (
+            } else if (// User win conditions
                 (userChoice.equals("stone") && computerChoice.equals("scissors")) ||
                 (userChoice.equals("paper") && computerChoice.equals("stone")) ||
                 (userChoice.equals("scissors") && computerChoice.equals("paper"))
