@@ -37,22 +37,29 @@ public class SavingsAccount extends BankAccount {
         if (amount <= 0) throw new IllegalArgumentException("Withdraw amount must be positive");
 
         double totalDeduction = amount;
+        String logMessage = "Withdrawal: " + amount;
 
-        // check withdrawal count
+        // check withdrawal count and apply fee if needed
         if (withdrawalsThisMonth >= freeWithdrawals) {
             totalDeduction += withdrawalFee;
+            logMessage += " + Withdrawal Fee: " + withdrawalFee;
         }
 
         double projected = this.balance - totalDeduction;
         if (projected < minBalance) {
             throw new InsufficientFundsException(
-                "Withdrawal would breach minimum balance (" + minBalance + "). Current: " + balance
+                "Withdrawal would breach minimum balance (" + minBalance + "). Current: " + balance + 
+                ", Deduction: " + totalDeduction
             );
         }
 
         // Allowed
         this.balance = projected;
         withdrawalsThisMonth++;
+        
+        // FIX: Add transaction logging
+        logMessage += ". New balance: " + this.balance;
+        logTransaction(logMessage);
     }
 
 
@@ -61,11 +68,13 @@ public class SavingsAccount extends BankAccount {
     public synchronized void applyAnnualInterest() {
         double interest = this.balance * (interestRatePercent / 100.0);
         this.balance += interest;
+        logTransaction("Applied annual interest: +" + interest);
     }
 
     // Reset withdrawals at the start of new month
     public synchronized void resetMonthlyWithdrawals() {
         withdrawalsThisMonth = 0;
+        logTransaction("Monthly withdrawal count reset to 0.");
     }
 
     @Override
