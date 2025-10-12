@@ -119,6 +119,7 @@ public class chapter3{
         String name1 = "Deepak";
         String name2 = new String("Deepak");
         System.out.println(name1==name2);// false
+        //
         System.out.println(name1.equals(name2));// true
     }
 }
