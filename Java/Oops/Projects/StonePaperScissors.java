@@ -11,10 +11,13 @@ public class StonePaperScissors {
         int computerScore = 0;
 
         System.out.println("=== Stone Paper Scissors Game ===");
-        System.out.println("You will play 5 rounds against the computer!");
+        System.out.print("Enter the number of rounds you want to play: ");
+        int totalRounds = scanner.nextInt();
+
+        System.out.println("\nYou will play " + totalRounds + " rounds against the computer!");
         System.out.println("Enter your choice: stone, paper, or scissors\n");
 
-        for (int round = 1; round <= 5; round++) {
+        for (int round = 1; round <= totalRounds; round++) {
             System.out.println("Round " + round + ":");
             System.out.print("Your choice: ");
             String userChoice = scanner.next().toLowerCase();
@@ -29,7 +32,7 @@ public class StonePaperScissors {
             String computerChoice = choices[random.nextInt(3)];
             System.out.println("Computer chose: " + computerChoice);
 
-            // Determine winner for the round
+            // Determine round winner
             if (userChoice.equals(computerChoice)) {
                 System.out.println("It's a tie!");
             } else if (
