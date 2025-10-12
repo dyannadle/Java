@@ -17,12 +17,10 @@
             System.out.println(i);
             i++;
         }
-        while(true){
-            System.out.println("I am an infinite loop");
+
         }
     }
- }
-
+ 
 
 
 //IF ELSE CLAUSE 
