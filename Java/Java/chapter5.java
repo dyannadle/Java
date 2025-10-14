@@ -90,31 +90,41 @@
 //do while loop
 
 
+// public class chapter5{
+//     public static void main(String[]args){
+//         int a=0;
+//         while(a<10){//condition check
+//             System.out.println(a);
+//             a++;     //increment
+//         }
+//         int b=10;//initialization
+//         do{ //execute first then check condition
+//             System.out.println(b);
+//             b++;
+//         }
+//         while(b<20);//condition check
+    
+//   int c=1;
+//   do {
+// System.out.println(c);
+// c++;
+
+//   } 
+//   while(c<55);
+// }
+// }
+
+
+
+// FOR LOOP
+
 public class chapter5{
     public static void main(String[]args){
-        int a=0;
-        while(a<10){//condition check
-            System.out.println(a);
-            a++;     //increment
+        for(int i=1;i<=10; i++){
+            System.out.println(i);
         }
-        int b=10;//initialization
-        do{ //execute first then check condition
-            System.out.println(b);
-            b++;
-        }
-        while(b<20);//condition check
-    
-  int c=1;
-  do {
-System.out.println(c);
-c++;
-
-  } 
-  while(c<55);
+    }
 }
-}
-
-
 
 
 
