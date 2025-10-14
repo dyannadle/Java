@@ -1,5 +1,6 @@
 
 // for loop
+// print 1 to 10
 // public class chapter5{
 //     public static void main(String[]args){
 //         for (int i=1;i<=10; i++){
@@ -10,21 +11,24 @@
 
 
 // while loop
- public class chapter5{
-    public static void main(String[]args){
-        int i=1;
-        while(i<=9){
-            System.out.println(i);
-            i++;
-        }
 
-        }
-    }
+// print 1 to 9
+//  public class chapter5{
+//     public static void main(String[]args){
+//         int i=1;
+//         while(i<=9){
+//             System.out.println(i);
+//             i++;
+//         }
+
+//         }
+//     }
  
 
 
 //IF ELSE CLAUSE 
 
+// print if a person is experienced or not based on age
 
 // import java.util.Scanner;
 
@@ -51,7 +55,8 @@
 
 
 // Switch case control 
-//
+
+// print a message based on age
 
 // import java.util.Scanner;
 
@@ -81,6 +86,25 @@
 // }
 // }
 
+
+//do while loop
+
+
+public class chapter5{
+    public static void main(String[]args){
+        int a=0;
+        while(a<10){
+            System.out.println(a);
+            a++;     
+        }
+        int b=10;
+        do{
+            System.out.println(b);
+            b++;
+        }
+        while(b<20);
+    }
+}
 
 
 
