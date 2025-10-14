@@ -103,16 +103,16 @@ public class chapter5{
             b++;
         }
         while(b<20);//condition check
-    }
+    
   int c=1;
-  do{
+  do {
 System.out.println(c);
 c++;
 
   } 
   while(c<55);
 }
-
+}
 
 
 
