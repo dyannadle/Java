@@ -221,20 +221,24 @@
 
 //continue statement
 
-public class chapter5{
-    public static void main(String[]args){
+// public class chapter5{
+//     public static void main(String[]args){
 
-        int i=1;
-        while(1<=8){
-        System.out.println("Loop Starts :"+i);
-        if(i==2){
-        System.out.println("Java is great");
- continue;
-        }
-        i++;    
-            }   
+//         int i=1;
+//         while(1<=8){
+//         System.out.println("Loop Starts :"+i);
+//         if(i==2){
+//         System.out.println("Java is great");
+//  continue;
+//         }
+//         i++;    
+//             }   
     
-        }
+//         }
 
         
-    }   
+//     }   
+
+
+
+
