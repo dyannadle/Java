@@ -93,17 +93,24 @@
 public class chapter5{
     public static void main(String[]args){
         int a=0;
-        while(a<10){
+        while(a<10){//condition check
             System.out.println(a);
-            a++;     
+            a++;     //increment
         }
-        int b=10;
-        do{
+        int b=10;//initialization
+        do{ //execute first then check condition
             System.out.println(b);
             b++;
         }
-        while(b<20);
+        while(b<20);//condition check
     }
+  int c=1;
+  do{
+System.out.println(c);
+c++;
+
+  } 
+  while(c<55);
 }
 
 
