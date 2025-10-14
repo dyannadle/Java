@@ -142,14 +142,16 @@
 
 ///decrementing for loop
 
-public class chapter5{
-    public static void main(String[]args){
-   int n=10;
-        for(int i=0; i<n; i--){
-            System.out.println(2*i+1);
-        }
-    }
-}
+//don not run this code very dangerousa and infinite loop
+
+// public class chapter5{
+//     public static void main(String[]args){
+//    int n=10;
+//         for(int i=0; i<n; i--){
+//             System.out.println(2*i+1);
+//         }
+//     }
+// }
 
 
 
@@ -166,3 +168,11 @@ public class chapter5{
 
 
     
+public class chapter5{
+    public static void main(String[]args){
+
+        for(int i =5; i>0; i++)         
+                  System.out.println(i);
+        }
+    }
+}
