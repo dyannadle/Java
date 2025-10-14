@@ -226,7 +226,7 @@ public class chapter5{
 
         int i=1;
         while(1<=8){
-        System.out.println(i);
+        System.out.println("Loop Starts :"+i);
         if(i==2){
         System.out.println("Java is great");
  continue;
