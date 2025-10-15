@@ -379,94 +379,192 @@
 
 
 // String and StringBuilder methods menu-driven program
-import java.util.Scanner;    
-public class chapter3 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = "Hello World";
-        StringBuilder sb = new StringBuilder("Hello");
-        while (true) {
-            System.out.println("\n=== STRING & STRINGBUILDER MENU ===");
-            System.out.println("Current String: \"" + str + "\"");
-            System.out.println("Current StringBuilder: \"" + sb + "\"");
+import java.util.InputMismatchException; // Imports the exception class for handling incorrect input types
+import java.util.Scanner;                 // Imports the Scanner class for reading user input
 
-            System.out.println("-----------------------------------");
-            System.out.println("1. String length()");
-            System.out.println("2. charAt()");
-            System.out.println("3. concat()");
-            System.out.println("4. equals()");
-            System.out.println("5. indexOf()");
-            System.out.println("6. substring()");
-            System.out.println("7. toUpperCase()");
-            System.out.println("8. trim()");
-            System.out.println("9. replace() (String)");
-            System.out.println("10. split()");
-            System.out.println("11. StringBuilder append()");
-            System.out.println("12. insert()");
-            System.out.println("13. delete()");
-            System.out.println("14. replace() (StringBuilder)");
-            System.out.println("15. reverse()");
-            System.out.println("16. capacity()");
-            System.out.println("17. ensureCapacity()");
-            System.out.println("18. setLength()");
-            System.out.println("19. toString() (StringBuilder)");
-            System.out.println("20. Exit");
-            System.out.print("Choose an option: ");
-            int choice = sc.nextInt();
-            sc.nextLine(); // Consume newline
-            switch (choice) {
-                case 1:
-                    System.out.println("Length of string: " + str.length());
-                    break;
-                case 2:
-                    System.out.print("Enter index (0 to " + (str.length() - 1) + "): ");
-                    int index = sc.nextInt();
-                    sc.nextLine(); // Consume newline
-                    System.out.println("Character at index " + index + ": " + str.charAt(index));
-                    break;
-                case 3:
-                    System.out.print("Enter string to concat: ");
-                    String toConcat = sc.nextLine();
-                    System.out.println("Result: " + str.concat(toConcat));
-                    break;
-                case 4:
-                    System.out.print("Enter string to compare: ");
-                    String compareStr = sc.nextLine();
-                    System.out.println("Equals? " + str.equals(compareStr));
-                    break;
-                case 5:
-                    System.out.print("Enter substring to find index: ");
-                    String subStr = sc.nextLine();
-                    System.out.println("Index of \"" + subStr + "\": " + str.indexOf(subStr));
-                    break;
-                case 6:
-                    System.out.print("Enter start index for substring: ");
-                    int start = sc.nextInt();
-                    sc.nextLine(); // Consume newline
-                    System.out.print("Enter end index for substring: ");
-                    int end = sc.nextInt();
-                    sc.nextLine(); // Consume newline
-                    System.out.println("Substring: " + str.substring(start, end));
-                    break;
-                case 7:
-                    System.out.println("Uppercase: " + str.toUpperCase());
-                    break;
-                case 8:
-                    System.out.println("Trimmed string: \"" + str.trim() + "\"");
-                    break;
-                case 9:
-                    System.out.print("Enter target substring to replace: ");
-                    String target = sc.nextLine();
-                    System.out.print("Enter replacement substring: ");
-                    String replacement = sc.nextLine();
-                    System.out.println("Result: " + str.replace(target, replacement));
-                    break;
-                case 10:
-                    System.out.print("Enter delimiter for split: ");
-                    String delimiter = sc.nextLine();
-                    String[] parts = str.split(delimiter);
-                    System.out.println("Split parts:");
-                    for (String part : parts) {
-                        System.out.println(part);
+public class chapter3 { // Defines the public class named chapter3
+
+    public static void main(String[] args) { // The main method, the starting point of the program
+        
+        // Use try-with-resources to automatically close the Scanner (prevents resource leak)
+        try (Scanner sc = new Scanner(System.in)) { 
+            
+            String str = "  Hello World  "; // Initializes an immutable String object (added spaces for trim() demo)
+            StringBuilder sb = new StringBuilder("Hello"); // Initializes a mutable StringBuilder object
+            
+            while (true) { // Starts an infinite loop for the menu (will be broken by case 20)
+                
+                // --- Display Menu and Current State ---
+                System.out.println("\n=== STRING & STRINGBUILDER MENU ==="); // Prints the main menu title
+                System.out.println("Current String: \"" + str + "\"");      // Shows the current value of the String
+                System.out.println("Current StringBuilder: \"" + sb + "\""); // Shows the current value of the StringBuilder
+
+                System.out.println("-----------------------------------");
+                System.out.println("1. String length()");
+                System.out.println("2. charAt()");
+                System.out.println("3. concat()");
+                System.out.println("4. equals()");
+                System.out.println("5. indexOf()");
+                System.out.println("6. substring()");
+                System.out.println("7. toUpperCase()");
+                System.out.println("8. trim()");
+                System.out.println("9. replace() (String)");
+                System.out.println("10. split()");
+                System.out.println("11. StringBuilder append()");
+                System.out.println("12. insert()");
+                System.out.println("13. delete()");
+                System.out.println("14. replace() (StringBuilder)");
+                System.out.println("15. reverse()");
+                System.out.println("16. capacity()");
+                System.out.println("17. ensureCapacity()");
+                System.out.println("18. setLength()");
+                System.out.println("19. toString() (StringBuilder)");
+                System.out.println("20. Exit");
+                System.out.print("Choose an option: "); // Prompt the user for a choice
+                
+                try {
+                    // --- Input Reading with InputMismatchException Handling ---
+                    int choice = sc.nextInt();    // Reads the integer menu choice (can throw InputMismatchException)
+                    sc.nextLine();                // Consumes the remaining newline character after nextInt()
+                    
+                    // --- Switch Statement for Menu Operations ---
+                    switch (choice) {
+                        case 1: // String length()
+                            System.out.println("Length of string: " + str.length());
+                            break;
+                        case 2: // String charAt()
+                            System.out.print("Enter index (0 to " + (str.length() - 1) + "): ");
+                            int index = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.println("Character at index " + index + ": " + str.charAt(index)); // Can throw IndexOutOfBoundsException
+                            break;
+                        case 3: // String concat()
+                            System.out.print("Enter string to concat: ");
+                            String toConcat = sc.nextLine();
+                            System.out.println("Result: " + str.concat(toConcat));
+                            break;
+                        case 4: // String equals()
+                            System.out.print("Enter string to compare: ");
+                            String compareStr = sc.nextLine();
+                            System.out.println("Equals? " + str.equals(compareStr));
+                            break;
+                        case 5: // String indexOf()
+                            System.out.print("Enter substring to find index: ");
+                            String subStr = sc.nextLine();
+                            System.out.println("Index of \"" + subStr + "\": " + str.indexOf(subStr));
+                            break;
+                        case 6: // String substring()
+                            System.out.print("Enter start index for substring: ");
+                            int start = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.print("Enter end index for substring: ");
+                            int end = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.println("Substring: " + str.substring(start, end)); // Can throw IndexOutOfBoundsException
+                            break;
+                        case 7: // String toUpperCase()
+                            System.out.println("Uppercase: " + str.toUpperCase());
+                            break;
+                        case 8: // String trim()
+                            System.out.println("Trimmed string: \"" + str.trim() + "\""); // Removes leading/trailing spaces
+                            break;
+                        case 9: // String replace()
+                            System.out.print("Enter target substring to replace: ");
+                            String target = sc.nextLine();
+                            System.out.print("Enter replacement substring: ");
+                            String replacement = sc.nextLine();
+                            System.out.println("Result: " + str.replace(target, replacement));
+                            break;
+                        case 10: // String split()
+                            System.out.print("Enter delimiter for split: ");
+                            String delimiter = sc.nextLine();
+                            String[] parts = str.split(delimiter); // Splits the string into an array
+                            System.out.println("Split parts:");
+                            for (String part : parts) {
+                                System.out.println(" | " + part);
+                            }
+                            break;
+                            
+                        // --- STRINGBUILDER METHODS (FIX: COMPLETED CASES 11-20) ---
+                        case 11: // StringBuilder append()
+                            System.out.print("Enter string to append: ");
+                            String appendStr = sc.nextLine();
+                            sb.append(appendStr); // Appends the string to the end of the StringBuilder
+                            System.out.println("After append(): " + sb);
+                            break;
+                        case 12: // StringBuilder insert()
+                            System.out.print("Enter index to insert (0 to " + sb.length() + "): ");
+                            int insertIndex = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.print("Enter string to insert: ");
+                            String insertStr = sc.nextLine();
+                            sb.insert(insertIndex, insertStr); // Inserts the string at the specified index
+                            System.out.println("After insert(): " + sb);
+                            break;
+                        case 13: // StringBuilder delete()
+                            System.out.print("Enter start index to delete: ");
+                            int delStart = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.print("Enter end index to delete: ");
+                            int delEnd = sc.nextInt();
+                            sc.nextLine(); 
+                            sb.delete(delStart, delEnd); // Deletes characters from start (inclusive) to end (exclusive)
+                            System.out.println("After delete(): " + sb);
+                            break;
+                        case 14: // StringBuilder replace()
+                            System.out.print("Enter start index to replace: ");
+                            int repStart = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.print("Enter end index to replace: ");
+                            int repEnd = sc.nextInt();
+                            sc.nextLine(); 
+                            System.out.print("Enter replacement string: ");
+                            String repStr = sc.nextLine();
+                            sb.replace(repStart, repEnd, repStr); // Replaces substring with a new string
+                            System.out.println("After replace(): " + sb);
+                            break;
+                        case 15: // StringBuilder reverse()
+                            sb.reverse(); // Reverses the sequence of characters
+                            System.out.println("After reverse(): " + sb);
+                            break;
+                        case 16: // StringBuilder capacity()
+                            System.out.println("Current capacity: " + sb.capacity()); // Reports current allocated buffer size
+                            break;
+                        case 17: // StringBuilder ensureCapacity()
+                            System.out.print("Enter minimum capacity to ensure: ");
+                            int minCap = sc.nextInt();
+                            sc.nextLine(); 
+                            sb.ensureCapacity(minCap); // Ensures the capacity is at least the specified minimum
+                            System.out.println("New capacity: " + sb.capacity());
+                            break;
+                        case 18: // StringBuilder setLength()
+                            System.out.print("Enter new length: ");
+                            int newLen = sc.nextInt();
+                            sc.nextLine(); 
+                            sb.setLength(newLen); // Sets the new length, truncating or padding with null characters
+                            System.out.println("After setLength(): \"" + sb + "\" (Length: " + sb.length() + ")");
+                            break;
+                        case 19: // StringBuilder toString()
+                            System.out.println("StringBuilder converted to String: " + sb.toString()); // Converts mutable SB to immutable String
+                            break;
+                        case 20: // Exit program
+                            System.out.println("Exiting program. Goodbye!");
+                            return; // Terminates the main method and the program
+                        default:
+                            System.out.println("Invalid option! Please select a number between 1 and 20.");
                     }
-                    break
+                } catch (InputMismatchException e) {
+                    // FIX: Catches when user types text instead of a number for choice or index
+                    System.out.println("\n!! ERROR: Invalid input type! Please enter a number for the choice or index.");
+                    sc.nextLine(); // Must clear the bad input from the buffer
+                } catch (IndexOutOfBoundsException e) {
+                    // Catches when user enters an index that is out of the string/builder boundaries
+                    System.out.println("\n!! ERROR: Index out of bounds. Check the start/end range relative to the length.");
+                } catch (Exception e) {
+                    // Catches any other unexpected runtime exceptions
+                    System.out.println("\n!! UNEXPECTED ERROR: " + e.getMessage());
+                }
+            }
+        } // The Scanner 'sc' is automatically closed here
+    }
+}
