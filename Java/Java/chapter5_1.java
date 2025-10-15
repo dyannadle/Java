@@ -184,15 +184,32 @@
 
 
 //what can be done using one type of loop can also be done using other two types of loop- true or false
+    // import java.util.Scanner;
+    // public class chapter5_1 {   
+    //     public static void main(String[]args){
+    //         Scanner sc = new Scanner(System.in);
+    //         int n=5;
+    //         int i=1;
+    //         while(i<=n){
+    //             System.out.println(i);
+    //             i++;
+    //         }
+    //     }
+    // }
+
+
+
+
+    //
     import java.util.Scanner;
-    public class chapter5_1 {   
-        public static void main(String[]args){
-            Scanner sc = new Scanner(System.in);
-            int n=5;
-            int i=1;
-            while(i<=n){
-                System.out.println(i);
-                i++;
-            }
-        }
+     public class chapter5_1 {   
+         public static void main(String[]args){
+    int n=8;
+    int sum=0;
+    for(int  i=1; i<=10; i++){
+        sum+=n*i;
+
     }
+    System.out.println("The sum of multiplication table is :" + sum);
+}
+}
