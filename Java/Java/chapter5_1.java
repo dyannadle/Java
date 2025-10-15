@@ -153,15 +153,29 @@
 
 
 //REPEAT 5 USING DO WHILE LOOP
-import java.util.Scanner;   
-public class chapter5_1 {   
-    public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
-        int n=5;
-        int i=1;
-        do{
-            System.out.println(i);
-            i++;
-        }while(i<=n);
+// import java.util.Scanner;   
+// public class chapter5_1 {   
+//     public static void main(String[]args){
+//         Scanner sc = new Scanner(System.in);
+//         int n=5;
+//         int i=1;
+//         do{
+//             System.out.println(i);
+//             i++;
+//         }while(i<=n);
+//     }
+// }
+
+
+//repeat 1 to n using for/ while loop
+    import java.util.Scanner;
+    public class chapter5_1 {   
+        public static void main(String[]args){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a number :");
+            int n= sc.nextInt();
+            for(int i=1; i<=n; i++){
+                System.out.println(i);
+            }
+        }
     }
-}
