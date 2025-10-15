@@ -116,17 +116,18 @@
 
 
 
-//write a program to print factorial of a given number
-import java.util.Scanner;   
+//write a program to print factorial of a given number using for loop
+import java.util.Scanner;
 public class chapter5_1 {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number :");
-        int n= sc.nextInt();
-        int fact=1;
-        for(int i=n; i>0; i--){
-            fact=fact*i;
+        int n=5;
+        int i=1;
+        int factorial=1;
+        while(i<=n){
+            factorial=factorial*i;
+            i++;
         }
-        System.out.println("The factorial of " + n + " is :" + fact);
+        System.out.println("The factorial of a given number is :" + factorial);
     }
 }
