@@ -101,33 +101,33 @@
 
 
 //write a progaram to print multiplication table of a given number
-// import java.util.Scanner;
-// public class chapter5_1 {
-//     public static void main(String[]args){
-//         Scanner sc = new Scanner(System.in);
-//         System.out.println("Enter a number :");// prompt user for input
-//         int n= sc.nextInt();// input number
-//         System.out.println("Multiplication table of " + n + " is :");
-//         for(int i=1; i<=10; i++){// loop from 1 to 10
-//             System.out.println(n + " * " + i + " = " + (n*i));// print n*i
-//         }
-//     }
-// }
-
-
-
-//write a program to print factorial of a given number using for loop
 import java.util.Scanner;
 public class chapter5_1 {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
-        int n=5;
-        int i=1;
-        int factorial=1;
-        while(i<=n){
-            factorial=factorial*i;
-            i++;
+        System.out.println("Enter a number :");// prompt user for input
+        int n= sc.nextInt();// input number
+    
+            for(int i=1; i<=10; i++){ // loop from 1 to 10
+        System.out.printf(%d X %d = %d\n, n, i, n*i); // print multiplication table
         }
-        System.out.println("The factorial of a given number is :" + factorial);
     }
 }
+
+
+
+//write a program to print factorial of a given number using for loop
+// import java.util.Scanner;
+// public class chapter5_1 {
+//     public static void main(String[]args){
+//         Scanner sc = new Scanner(System.in);
+//         int n=5;
+//         int i=1;
+//         int factorial=1;
+//         while(i<=n){
+//             factorial=factorial*i;
+//             i++;
+//         }
+//         System.out.println("The factorial of a given number is :" + factorial);
+//     }
+// }
