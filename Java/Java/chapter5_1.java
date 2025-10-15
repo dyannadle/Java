@@ -168,14 +168,31 @@
 
 
 //repeat 1 to n using for/ while loop
+    // import java.util.Scanner;
+    // public class chapter5_1 {   
+    //     public static void main(String[]args){
+    //         Scanner sc = new Scanner(System.in);
+    //         System.out.println("Enter a number :");
+    //         int n= sc.nextInt();
+    //         for(int i=1; i<=n; i++){
+    //             System.out.println(i);
+    //         }
+    //     }
+    // }
+
+
+
+
+//what can be done using one type of loop can also be done using other two types of loop- true or false
     import java.util.Scanner;
     public class chapter5_1 {   
         public static void main(String[]args){
             Scanner sc = new Scanner(System.in);
-            System.out.println("Enter a number :");
-            int n= sc.nextInt();
-            for(int i=1; i<=n; i++){
+            int n=5;
+            int i=1;
+            while(i<=n){
                 System.out.println(i);
+                i++;
             }
         }
     }
