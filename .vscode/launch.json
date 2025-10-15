@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Evenorodd",
+            "request": "launch",
+            "mainClass": "Evenorodd",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "StonePaperScissors",
+            "request": "launch",
+            "mainClass": "StonePaperScissors",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "StudentManagement",
+            "request": "launch",
+            "mainClass": "StudentManagement.StudentManagement",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "WordGuessGameApp",
+            "request": "launch",
+            "mainClass": "WordGuessGameApp",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "add",
+            "request": "launch",
+            "mainClass": "add",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "chapter3",
+            "request": "launch",
+            "mainClass": "chapter3",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "chapter3_1",
+            "request": "launch",
+            "mainClass": "chapter3_1",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "chapter4",
+            "request": "launch",
+            "mainClass": "chapter4",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "factorial",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "practice",
+            "request": "launch",
+            "mainClass": "practice",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "prime",
+            "request": "launch",
+            "mainClass": "prime",
+            "projectName": "Java_72da403b"
+        }
+    ]
+}

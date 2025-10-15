@@ -104,7 +104,7 @@ class WordGuessGame {
 }
 
 // Main Class to run the game
-public class Main {
+public class WordGuessGameApp {
     public static void main(String[] args) {
         // String array of possible words
         String[] possibleWords = {"java", "programming", "oop", "class", "object", "array"};
