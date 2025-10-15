@@ -25,16 +25,28 @@
 
 //write a program to print first n even numbers
 
+// import java.util.Scanner;
+// public class chapter5_1 {
+//     public static void main(String[]args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter a number :");
+//         int n= sc.nextInt();
+//         for(int i=1; i<=n; i++){
+//             System.out.println(2*i);
+//         }
+//     }
+// }
+
+//write a program to print first n odd numbers
+
 import java.util.Scanner;
 public class chapter5_1 {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number :");
         int n= sc.nextInt();
-        for(int i=1; i<=n; i++){
-            System.out.println(2*i);
+        for(int i=0; i<n; i++){
+            System.out.println(2*i+1);
         }
     }
 }
-
-
