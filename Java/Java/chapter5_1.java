@@ -200,16 +200,39 @@
 
 
 
-    //
-    import java.util.Scanner;
-     public class chapter5_1 {   
-         public static void main(String[]args){
-    int n=8;
-    int sum=0;
-    for(int  i=1; i<=10; i++){
-        sum+=n*i;
+    //write a program to calculate sum of multiplication table of a given number
+//     import java.util.Scanner;
+//      public class chapter5_1 {   
+//          public static void main(String[]args){
+//     int n=8;
+//     int sum=0;
+//     for(int  i=1; i<=10; i++){
+//         sum+=n*i;
 
+//     }
+//     System.out.println("The sum of multiplication table is :" + sum);
+// }
+// }
+
+
+
+
+//a do while loop is executed :
+//at least once
+//at least twice
+//atmost once
+//zero or more times
+//once or more times
+
+import java.util.Scanner;
+    public class chapter5_1 {   
+        public static void main(String[]args){
+            Scanner sc = new Scanner(System.in);
+            int n=5;
+            int i=1;
+            do{
+                System.out.println(i);
+                i++;
+            }while(i<=n);
+        }
     }
-    System.out.println("The sum of multiplication table is :" + sum);
-}
-}
