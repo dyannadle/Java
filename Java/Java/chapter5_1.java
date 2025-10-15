@@ -109,7 +109,7 @@ public class chapter5_1 {
         int n= sc.nextInt();// input number
     
             for(int i=1; i<=10; i++){ // loop from 1 to 10
-        System.out.printf(%d X %d = %d\n, n, i, n*i); // print multiplication table
+        System.out.printf("%d X %d = %d\n", n, i, n*i); // print multiplication table
         }
     }
 }
