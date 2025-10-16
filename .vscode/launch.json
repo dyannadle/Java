@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "chapter6",
+            "request": "launch",
+            "mainClass": "chapter6",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
