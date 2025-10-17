@@ -30,7 +30,13 @@ public class chapter6 {
 }
 
 
-
+public class chapter6{
+    public static void main(String[]args){
+        float[] marks ={45,44,56,776,10};
+            System.out.println(marks[3]);
+    System.out.println(marks.length);
+    }
+}
 
 public class chapter6 {
     public static void main(String[]args ){
