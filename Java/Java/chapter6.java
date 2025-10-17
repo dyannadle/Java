@@ -28,3 +28,14 @@ public class chapter6 {
         System.out.println(marks.length );
     }
 }
+
+
+
+
+public class chapter6 {
+    public static void main(String[]args ){
+        String[] student={"1","2","3","4"};
+        System.out.println(student[1]);
+    System.out.println(student.length);
+    }
+}
