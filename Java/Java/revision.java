@@ -43,11 +43,10 @@ public class revision {
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
          System.out.print("The Sum of 2 numbers is: ");
-        System.out.print(" Enter number one : ");
         int a = sc.nextInt();
         System.out.print(" Enter number two : ");
         int b = sc.nextInt();
-        System.out.print(" Enter number two : ");
+        System.out.print(" Sum of two number is : ");
        System.out.println(a + b);    
         }
    }
