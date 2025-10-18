@@ -44,7 +44,9 @@ public class revision {
        Scanner sc = new Scanner(System.in);
          System.out.print("The Sum of 2 numbers is: ");
         int a = sc.nextInt();
+        System.out.print(" Enter number one : ");
         int b = sc.nextInt();
+        System.out.print(" Enter number two : ");
        System.out.println(a + b);    
         }
    }
