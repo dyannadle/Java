@@ -30,6 +30,6 @@ public class revision {
     double marks =94.5;
     boolean isBoy = true;
     float cgpa = 8.9f;
-       System.out.println("Name: " + name + "\nAge: " + age+ "\nCity: " + city + "\nmarks in double: " + age + "\nIs Boy: " + isBoy + "\nCGPA: " + cgpa);    
+       System.out.println("Name: " + name + "\nAge: " + age+ "\nCity: " + city + "\nmarks : " + marks  + "\nIs Boy: " + isBoy + "\nCGPA: " + cgpa);    
         }
    }
