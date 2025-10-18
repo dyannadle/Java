@@ -16,7 +16,7 @@ public class revision {
        String name= "Deepak";
        int age =24;
        String city = "New Delhi";
-        System.out.println(name + is  + age+ "years old and he  lives in" + city);
+        System.out.println(name + " is " + age+ "years old and he  lives in" + city);
         }
    }
 
