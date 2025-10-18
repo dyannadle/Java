@@ -82,11 +82,65 @@
 //     }
 
 
-public class revision {
-    public static void main(String[] args) {
-    double price = 45.67;
-     int iprice = (int) price;   
-     System.out.print(iprice);   
-          }
-    }
+// public class revision {
+//     public static void main(String[] args) {
+//     double price = 45.67;
+//      int iprice = (int) price;   
+//      System.out.print(iprice);   
+//           }
+//     }
 
+
+
+// This program demonstrates the rules of type casting (implicit and explicit)
+// between the integer (int) and floating-point types (float, double) in Java.
+
+public class revision {
+
+    public static void main(String[] args) {
+
+        System.out.println("--- 1. IMPLICIT CASTING (Widening Conversion) ---");
+        // Implicit casting is automatic and safe (no data loss).
+        // It moves from smaller types (e.g., int) to larger types (e.g., double).
+
+        int myInt = 100; // 32-bit integer
+        float myFloat = 1000.5f; // 32-bit floating point
+
+        // 1.1. int to float (Implicit)
+        // int is smaller than float, so the conversion is automatic and safe.
+        float floatFromInt = myInt; 
+        System.out.println("int (" + myInt + ") -> float: " + floatFromInt); // Output: 100.0
+
+        // 1.2. float to double (Implicit)
+        // float is smaller than double, so the conversion is automatic and safe.
+        double doubleFromFloat = myFloat;
+        System.out.println("float (" + myFloat + ") -> double: " + doubleFromFloat); // Output: 1000.5
+
+        // 1.3. int to double (Implicit)
+        // int is smaller than double, so the conversion is automatic and safe.
+        double doubleFromInt = myInt;
+        System.out.println("int (" + myInt + ") -> double: " + doubleFromInt); // Output: 100.0
+
+        System.out.println("\n--- 2. EXPLICIT CASTING (Narrowing Conversion) ---");
+        // Explicit casting requires the programmer to use (type) because it is unsafe
+        // and may result in data or precision loss (truncation).
+
+        double myDouble = 45.678; // 64-bit floating point
+        float largeFloat = 500.99f; // 32-bit floating point
+
+        // 2.1. double to float (Explicit)
+        // double is larger than float. Loss of precision is possible (Explicit cast required).
+        float floatFromDouble = (float) myDouble;
+        System.out.println("double (" + myDouble + ") -> float: " + floatFromDouble);
+
+        // 2.2. float to int (Explicit)
+        // float is larger than int. The decimal part is TRUNCATED (data loss).
+        int intFromFloat = (int) largeFloat;
+        System.out.println("float (" + largeFloat + ") -> int: " + intFromFloat); // Output: 500
+
+        // 2.3. double to int (Explicit)
+        // double is much larger than int. Both decimal loss and truncation occur.
+        int intFromDouble = (int) myDouble;
+        System.out.println("double (" + myDouble + ") -> int: " + intFromDouble); // Output: 45
+    }
+}
