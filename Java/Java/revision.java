@@ -38,15 +38,32 @@
 //    }
 
 
+//Write a program to add two integers entered by the user using Scanner.
+
+// import java.util.Scanner;
+// public class revision {
+//     public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//          System.out.print("The Sum of 2 numbers is: ");
+//         int a = sc.nextInt();
+//         System.out.print(" Enter number two : ");
+//         int b = sc.nextInt();
+//         System.out.print(" Sum of two number is : ");
+//        System.out.println(a + b);    
+//         }
+//    }
+
+
+
+//Write a Java program to calculate the area of a circle using the formula area = π * r * r.
 import java.util.Scanner;
 public class revision {
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
-         System.out.print("The Sum of 2 numbers is: ");
-        int a = sc.nextInt();
-        System.out.print(" Enter number two : ");
-        int b = sc.nextInt();
-        System.out.print(" Sum of two number is : ");
-       System.out.println(a + b);    
-        }
-   }
+         System.out.print(" Enter radius of circle: ");
+        double r = sc.nextDouble(); 
+        double area = Math.PI * r * r;
+        System.out.print(" Area of circle is : ");  
+         System.out.println(area);    
+          }
+    }
