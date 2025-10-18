@@ -22,14 +22,29 @@
 //    }
 
 
+// Write a program that demonstrates data types: declare variables of all primitive types and print their values.
+
+
+// public class revision {
+//     public static void main(String[] args) {
+//        String name= "Deepak";
+//        int age =24;
+//        String city = "New Delhi";
+//     double marks =94.5;
+//     boolean isBoy = true;
+//     float cgpa = 8.9f;
+//        System.out.println("Name: " + name + "\nAge: " + age+ "\nCity: " + city + "\nmarks : " + marks  + "\nIs Boy: " + isBoy + "\nCGPA: " + cgpa);    
+//         }
+//    }
+
+
+import java.util.Scanner;
 public class revision {
     public static void main(String[] args) {
-       String name= "Deepak";
-       int age =24;
-       String city = "New Delhi";
-    double marks =94.5;
-    boolean isBoy = true;
-    float cgpa = 8.9f;
-       System.out.println("Name: " + name + "\nAge: " + age+ "\nCity: " + city + "\nmarks : " + marks  + "\nIs Boy: " + isBoy + "\nCGPA: " + cgpa);    
+       Scanner sc = new Scanner(System.in);
+         System.out.print("The Sum of 2 numbers is: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+       System.out.println(a + b);    
         }
    }
