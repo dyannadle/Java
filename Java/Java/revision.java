@@ -77,7 +77,7 @@ public class revision {
      
      int marks = 10;
      double mdouble = marks;   
-        System.out.print(marks);  
+        System.out.print(mdouble);  
         // System.out.println(area);    
           }
     }

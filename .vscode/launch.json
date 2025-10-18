@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "revision",
+            "request": "launch",
+            "mainClass": "revision",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
             "name": "chapter6",
             "request": "launch",
             "mainClass": "chapter6",
