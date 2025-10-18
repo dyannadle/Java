@@ -13,10 +13,10 @@
 
 public class revision {
     public static void main(String[] args) {
-        char a= 'deepak';
-        char b = 'kumar';
-        char c = a+b;
-        System.out.println(c);
+       String name= "Deepak";
+       int age =24;
+       String city = "New Delhi";
+        System.out.println(name + is  + age+ "years old and he  lives in" + city);
         }
    }
 
