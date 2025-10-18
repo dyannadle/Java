@@ -71,13 +71,22 @@
 //     }
 
 
+// Write a program to demonstrate implicit and explicit type casting between int, float, and double.
+
+// public class revision {
+//     public static void main(String[] args) {
+//      int marks = 10;
+//      double mdouble = marks;   
+//         System.out.print(mdouble);   
+//           }
+//     }
+
 
 public class revision {
     public static void main(String[] args) {
-     
-     int marks = 10;
-     double mdouble = marks;   
-        System.out.print(mdouble);  
-        // System.out.println(area);    
+    double price = 45.67;
+     int iprice = (int) price;   
+     System.out.print(iprice);   
           }
     }
+
