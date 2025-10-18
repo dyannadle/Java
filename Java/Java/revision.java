@@ -56,14 +56,28 @@
 
 
 //Write a Java program to calculate the area of a circle using the formula area = π * r * r.
-import java.util.Scanner;
+
+
+// import java.util.Scanner;
+// public class revision {
+//     public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//          System.out.print(" Enter radius of circle: ");
+//         double r = sc.nextDouble(); 
+//         double area = Math.PI * r * r;
+//         System.out.print(" Area of circle is : ");  
+//          System.out.println(area);    
+//           }
+//     }
+
+
+
 public class revision {
     public static void main(String[] args) {
-       Scanner sc = new Scanner(System.in);
-         System.out.print(" Enter radius of circle: ");
-        double r = sc.nextDouble(); 
-        double area = Math.PI * r * r;
-        System.out.print(" Area of circle is : ");  
-         System.out.println(area);    
+     
+     int marks = 10;
+     double mdouble = marks;   
+        System.out.print(marks);  
+        // System.out.println(area);    
           }
     }
