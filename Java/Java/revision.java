@@ -201,19 +201,34 @@
 
 
 //Write a program to demonstrate all arithmetic operators on two integers.
+// import java.util.Scanner;
+// public class revision { 
+//     public static void main(String[] args) { 
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print(" Enter first number: ");
+//        int a = sc.nextInt();
+//        System.out.print(" Enter second number: ");
+//        int b = sc.nextInt();
+
+//        System.out.println(" Addition: " + (a + b));
+//        System.out.println(" Subtraction: " + (a - b));
+//        System.out.println(" Multiplication: " + (a * b));
+//        System.out.println(" Division: " + (a / b));
+//        System.out.println(" Modulus: " + (a % b));  
+//          } 
+//      }
+
+
+
+//Write a program that takes input as a character and prints its ASCII value. 
 import java.util.Scanner;
-public class revision { 
+public class revision {
     public static void main(String[] args) { 
        Scanner sc = new Scanner(System.in);
-       System.out.print(" Enter first number: ");
-       int a = sc.nextInt();
-       System.out.print(" Enter second number: ");
-       int b = sc.nextInt();
-
-       System.out.println(" Addition: " + (a + b));
-       System.out.println(" Subtraction: " + (a - b));
-       System.out.println(" Multiplication: " + (a * b));
-       System.out.println(" Division: " + (a / b));
-       System.out.println(" Modulus: " + (a % b));  
+       System.out.print(" Enter a character: ");
+       char ch = sc.next().charAt(0);
+       int asciiValue = (int) ch;
+       System.out.println(" ASCII value of " + ch + " is: " + asciiValue);  
          } 
      }
+     
