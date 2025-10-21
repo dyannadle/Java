@@ -148,15 +148,31 @@
 
 
 //Write a program that swaps two variables without using a third variable.
- public class revision {
-     public static void main(String[] args) { 
-        int a=10;
-        int b=20;
-        System.out.println("Before Swapping: a= " + a + " b= " + b);
-        a = a + b;
-        b= a-b;
-        a= a - b;
-        System.out.println("After Swapping: a= " + a + " b= " + b);  
-          } 
+//  public class revision {
+//      public static void main(String[] args) { 
+//         int a=10;
+//         int b=20;
+//         System.out.println("Before Swapping: a= " + a + " b= " + b);
+//         a = a + b;//30
+//         b= a-b;//10
+//         a= a - b;//20
+//         System.out.println("After Swapping: a= " + a + " b= " + b);  
+//           } 
+//     }
+
+
+//Write a program that accepts marks of a student and prints whether they passed or failed (pass >= 40).
+import java.util.Scanner;
+public class revision {
+    public static void main(String[] args) { 
+       Scanner sc = new Scanner(System.in);
+       System.out.print(" Enter marks of student: ");
+       int marks = sc.nextInt();
+       if(marks >= 40){
+        System.out.println(" Student has Passed ");
+       }
+       else{
+   System.out.println(" Student has Failed ");
+       }  
+         } 
     }
-    
