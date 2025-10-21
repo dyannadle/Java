@@ -162,17 +162,37 @@
 
 
 //Write a program that accepts marks of a student and prints whether they passed or failed (pass >= 40).
+// import java.util.Scanner;
+// public class revision {
+//     public static void main(String[] args) { 
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print(" Enter marks of student: ");
+//        int marks = sc.nextInt();
+//        if(marks >= 40){
+//         System.out.println(" Student has Passed ");
+//        }
+//        else{
+//    System.out.println(" Student has Failed ");
+//        }  
+//          } 
+//     }
+
+
+
+
+
+//Write a program to find whether a number is even or odd using the modulus operator.
 import java.util.Scanner;
 public class revision {
     public static void main(String[] args) { 
        Scanner sc = new Scanner(System.in);
-       System.out.print(" Enter marks of student: ");
-       int marks = sc.nextInt();
-       if(marks >= 40){
-        System.out.println(" Student has Passed ");
+       System.out.print(" Enter a number: ");
+       int num = sc.nextInt();
+       if(num % 2 == 0){
+        System.out.println(" The number is Even ");
        }
        else{
-   System.out.println(" Student has Failed ");
+   System.out.println(" The number is Odd ");
        }  
          } 
     }
