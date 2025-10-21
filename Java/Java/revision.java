@@ -235,18 +235,31 @@
 
 
      //Write a program to check whether a given year is a leap year or not.
-     import java.util.Scanner;
-     public class revision {    
-            public static void main(String[] args) { 
-            Scanner sc = new Scanner(System.in);
-            System.out.print(" Enter a year: ");
-            int year = sc.nextInt();
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-                System.out.println(year + " is a leap year.");
-            } else {
-                System.out.println(year + " is not a leap year.");
-            }  
-            } 
-        }
+    //  import java.util.Scanner;
+    //  public class revision {    
+    //         public static void main(String[] args) { 
+    //         Scanner sc = new Scanner(System.in);
+    //         System.out.print(" Enter a year: ");
+    //         int year = sc.nextInt();
+    //         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+    //             System.out.println(year + " is a leap year.");
+    //         } else {
+    //             System.out.println(year + " is not a leap year.");
+    //         }  
+    //         } 
+    //     }
 
-        
+
+
+        //Write a program to convert Celsius to Fahrenheit.
+        import java.util.Scanner;
+        public class revision {    
+                public static void main(String[] args) { 
+                Scanner sc = new Scanner(System.in);
+                System.out.print(" Enter temperature in Celsius: ");
+                double celsius = sc.nextDouble();
+                double fahrenheit = (celsius * 9/5) + 32;
+                System.out.println(celsius + "°C is equal to " + fahrenheit + "°F");
+                } 
+            }
+                
