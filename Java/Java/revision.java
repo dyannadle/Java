@@ -181,7 +181,7 @@
 
 
 
-//Write a program to find whether a number is even or odd using the modulus operator.
+//10. Write a program to find whether a number is even or odd using the modulus operator.
 // import java.util.Scanner;
 // public class revision {
 //     public static void main(String[] args) { 
@@ -221,14 +221,32 @@
 
 
 //Write a program that takes input as a character and prints its ASCII value. 
-import java.util.Scanner;
-public class revision {
-    public static void main(String[] args) { 
-       Scanner sc = new Scanner(System.in);
-       System.out.print(" Enter a character: ");
-       char ch = sc.next().charAt(0);
-       int asciiValue = (int) ch;
-       System.out.println(" ASCII value of " + ch + " is: " + asciiValue);  
-         } 
-     }
+// import java.util.Scanner;
+// public class revision {
+//     public static void main(String[] args) { 
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print(" Enter a character: ");
+//        char ch = sc.next().charAt(0);
+//        int asciiValue = (int) ch;
+//        System.out.println(" ASCII value of " + ch + " is: " + asciiValue);  
+//          } 
+//      }
      
+
+
+     //Write a program to check whether a given year is a leap year or not.
+     import java.util.Scanner;
+     public class revision {    
+            public static void main(String[] args) { 
+            Scanner sc = new Scanner(System.in);
+            System.out.print(" Enter a year: ");
+            int year = sc.nextInt();
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                System.out.println(year + " is a leap year.");
+            } else {
+                System.out.println(year + " is not a leap year.");
+            }  
+            } 
+        }
+
+        
