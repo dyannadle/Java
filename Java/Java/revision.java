@@ -351,19 +351,53 @@
 
 
 
-//Write a program to print the Unicode value of any entered character.
+// //Write a program to print the Unicode value of any entered character.
+//     import java.util.Scanner; // Imports the Scanner class for user input.
+    
+//     public class revision { 	// Defines the public class.
+//     	public static void main(String[] args) { // Main method execution starts here.
+            
+//             // Use try-with-resources to automatically close the Scanner resource.
+//             try (Scanner sc = new Scanner(System.in)) { 
+        	
+//                 System.out.print(" Enter a character: "); // Prompts the user for a character.
+                
+//                 // Reads the first character of the next token (word) entered by the user.
+//                 char ch = sc.next().charAt(0); 
+                
+//                 // Explicit Type Casting (Narrowing/Conversion):
+//                 // Converts the character's underlying Unicode value (which is stored as a 16-bit number)
+//                 // into a standard 32-bit integer (int). This requires the (int) cast.
+//                 int unicodeValue = (int) ch; 
+                
+//                 // Prints the entered character and its corresponding Unicode/ASCII value.
+//                 System.out.println(" Unicode value of " + ch + " is: " + unicodeValue); 
+                
+//             } // Scanner is automatically closed here.
+//     	} 
+//     }
+
+
+
+
+
+
+//Write a program that uses final keyword to define a constant PI = 3.14159 and calculates circle area.
 import java.util.Scanner;
-public class revision {
+public class revision { 	
     public static void main(String[] args) { 
-       Scanner sc = new Scanner(System.in);
-       System.out.print(" Enter a character: ");
-       char ch = sc.next().charAt(0);
-       int unicodeValue = (int) ch;
-       System.out.println(" Unicode value of " + ch + " is: " + unicodeValue);  
-         } 
-     }
+        final double PI = 3.14159; // Define constant PI
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print(" Enter radius of the circle: ");
+        double radius = sc.nextDouble();
+        
+        // Calculate area using the formula: area = PI * r * r
+        double area = PI * radius * radius;
+        
+        System.out.printf(" The area of the circle with radius %.2f is: %.2f%n", radius, area);
+        
+        sc.close(); // Close the scanner to prevent resource leaks
+    } 
+}
 
-
-
-
-     
