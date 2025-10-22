@@ -252,14 +252,40 @@
 
 
         //Write a program to convert Celsius to Fahrenheit.
-        import java.util.Scanner;
-        public class revision {    
-                public static void main(String[] args) { 
-                Scanner sc = new Scanner(System.in);
-                System.out.print(" Enter temperature in Celsius: ");
-                double celsius = sc.nextDouble();
-                double fahrenheit = (celsius * 9/5) + 32;
-                System.out.println(celsius + "°C is equal to " + fahrenheit + "°F");
-                } 
-            }
+        // import java.util.Scanner;
+        // public class revision {    
+        //         public static void main(String[] args) { 
+        //         Scanner sc = new Scanner(System.in);
+        //         System.out.print(" Enter temperature in Celsius: ");
+        //         double celsius = sc.nextDouble();
+        //         double fahrenheit = (celsius * 9/5) + 32;
+        //         System.out.println(celsius + "°C is equal to " + fahrenheit + "°F");
+        //         } 
+        //     }
                 
+
+
+
+        
+// Write a program that reads two integers and prints the larger one using a ternary operator.
+    import java.util.Scanner;
+    
+    public class revision { 	
+    	public static void main(String[] args) { 
+            // Best practice: Use try-with-resources to ensure Scanner is closed automatically
+            try (Scanner sc = new Scanner(System.in)) {
+        	
+                System.out.print(" Enter first integer: ");
+                int a = sc.nextInt();
+                
+                System.out.print(" Enter second integer: ");
+                int b = sc.nextInt();
+                
+                // Ternary Operator: (Condition) ? Value_if_True : Value_if_False;
+                int larger = (a > b) ? a : b;
+                
+                System.out.println(" The larger integer is: " + larger);
+                
+            } // Scanner is automatically closed here
+    	} 
+    }
