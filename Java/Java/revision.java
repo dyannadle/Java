@@ -413,21 +413,46 @@
 
 
 //Write a program to check if a given number is positive, negative, or zero using if-else.
+// import java.util.Scanner;
+// public class revision { 
+//     public static void main(String[] args) { 
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print(" Enter a number: ");
+//         int num = sc.nextInt();
+//         if(num > 0){
+//          System.out.println(" The number is Positive ");
+//         }
+//         else if(num < 0){
+//     System.out.println(" The number is Negative ");
+//         }  
+//         else{
+//             System.out.println(" The number is Zero ");
+//         }
+//           } 
+//      }
+
+
+// Write a program to print the grade of a student based on marks:
 import java.util.Scanner;
 public class revision { 
     public static void main(String[] args) { 
         Scanner sc = new Scanner(System.in);
-        System.out.print(" Enter a number: ");
-        int num = sc.nextInt();
-        if(num > 0){
-         System.out.println(" The number is Positive ");
+        System.out.print(" Enter marks of student: ");
+        int marks = sc.nextInt();
+        if(marks >= 90){
+         System.out.println(" Grade: A ");
         }
-        else if(num < 0){
-    System.out.println(" The number is Negative ");
+        else if(marks >= 80){
+     System.out.println(" Grade: B ");
         }  
+        else if(marks >= 70){
+            System.out.println(" Grade: C ");
+        }
+        else if(marks >= 60){
+            System.out.println(" Grade: D ");
+        }
         else{
-            System.out.println(" The number is Zero ");
+            System.out.println(" Grade: F ");
         }
           } 
      }
-
