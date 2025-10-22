@@ -325,26 +325,40 @@
 
 
 //Write a program to demonstrate bitwise AND, OR, XOR between two integers.
+// import java.util.Scanner;
+// public class revision { 	
+//     public static void main(String[] args) { 
+//         Scanner sc = new Scanner(System.in);
+        
+//         System.out.print(" Enter first integer: ");
+//         int a = sc.nextInt();
+        
+//         System.out.print(" Enter second integer: ");
+//         int b = sc.nextInt();
+        
+//         // Bitwise Operations
+//         int andResult = a & b; // Bitwise AND
+//         int orResult = a | b;  // Bitwise OR
+//         int xorResult = a ^ b; // Bitwise XOR
+        
+//         System.out.println(" Bitwise AND (a & b): " + andResult);
+//         System.out.println(" Bitwise OR (a | b): " + orResult);
+//         System.out.println(" Bitwise XOR (a ^ b): " + xorResult);
+        
+//         sc.close(); // Close the scanner to prevent resource leaks
+//     } 
+// }
+
+
+
+//Write a program to print the Unicode value of any entered character.
 import java.util.Scanner;
-public class revision { 	
+public class revision {
     public static void main(String[] args) { 
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.print(" Enter first integer: ");
-        int a = sc.nextInt();
-        
-        System.out.print(" Enter second integer: ");
-        int b = sc.nextInt();
-        
-        // Bitwise Operations
-        int andResult = a & b; // Bitwise AND
-        int orResult = a | b;  // Bitwise OR
-        int xorResult = a ^ b; // Bitwise XOR
-        
-        System.out.println(" Bitwise AND (a & b): " + andResult);
-        System.out.println(" Bitwise OR (a | b): " + orResult);
-        System.out.println(" Bitwise XOR (a ^ b): " + xorResult);
-        
-        sc.close(); // Close the scanner to prevent resource leaks
-    } 
-}
+       Scanner sc = new Scanner(System.in);
+       System.out.print(" Enter a character: ");
+       char ch = sc.next().charAt(0);
+       int unicodeValue = (int) ch;
+       System.out.println(" Unicode value of " + ch + " is: " + unicodeValue);  
+         } 
+     }
