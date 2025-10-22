@@ -49,7 +49,7 @@
 //         System.out.print(" Enter number two : ");
 //         int b = sc.nextInt();
 //         System.out.print(" Sum of two number is : ");
-//        System.out.println(a + b); AA   
+//        System.out.println(a + b); 
 //         }
 //    }
 
@@ -433,26 +433,56 @@
 
 
 // Write a program to print the grade of a student based on marks:
-import java.util.Scanner;
-public class revision { 
-    public static void main(String[] args) { 
-        Scanner sc = new Scanner(System.in);
-        System.out.print(" Enter marks of student: ");
-        int marks = sc.nextInt();
-        if(marks >= 90){
-         System.out.println(" Grade: A ");
-        }
-        else if(marks >= 80){
-     System.out.println(" Grade: B ");
-        }  
-        else if(marks >= 70){
-            System.out.println(" Grade: C ");
-        }
-        else if(marks >= 60){
-            System.out.println(" Grade: D ");
-        }
-        else{
-            System.out.println(" Grade: F ");
-        }
-          } 
-     }
+// import java.util.Scanner;
+// public class revision { 
+//     public static void main(String[] args) { 
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print(" Enter marks of student: ");
+//         int marks = sc.nextInt();
+//         if(marks >= 90){
+//          System.out.println(" Grade: A ");
+//         }
+//         else if(marks >= 80){
+//      System.out.println(" Grade: B ");
+//         }  
+//         else if(marks >= 70){
+//             System.out.println(" Grade: C ");
+//         }
+//         else if(marks >= 60){
+//             System.out.println(" Grade: D ");
+//         }
+//         else{
+//             System.out.println(" Grade: F ");
+//         }
+//           } 
+//      }
+
+
+
+
+
+
+//Write a program to print the first 10 natural numbers using a for loop.
+    import java.util.Scanner; // Imports the Scanner class for user input (not strictly needed for this loop, but kept for consistency).
+    
+    public class revision { 	// Defines the public class.
+    	public static void main(String[] args) { // Main method execution starts here.
+            
+            // The try-with-resources block is removed since the Scanner is no longer used, simplifying the code.
+
+            System.out.println("The first 10 natural numbers are:"); // Print a header
+            
+            // FIX: Use a standard 'for' loop structure.
+            // 1. Initialization: int i = 1 (start counter at 1)
+            // 2. Termination: i <= 10 (continue as long as i is 10 or less)
+            // 3. Increment: i++ (increase the counter by 1 after each iteration)
+            for (int i = 1; i <= 10; i++) {
+                
+                System.out.println(i); // Prints the current number, followed by a newline.
+            }
+            
+            // Optional: Print a conclusion statement
+            System.out.println("Loop finished."); 
+            
+    	} 
+    }
