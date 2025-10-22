@@ -268,24 +268,55 @@
 
         
 // Write a program that reads two integers and prints the larger one using a ternary operator.
-    import java.util.Scanner;
+    // import java.util.Scanner;
     
+    // public class revision { 	
+    // 	public static void main(String[] args) { 
+    //         // Best practice: Use try-with-resources to ensure Scanner is closed automatically
+    //         try (Scanner sc = new Scanner(System.in)) {
+        	
+    //             System.out.print(" Enter first integer: ");
+    //             int a = sc.nextInt();
+                
+    //             System.out.print(" Enter second integer: ");
+    //             int b = sc.nextInt();
+                
+    //             // Ternary Operator: (Condition) ? Value_if_True : Value_if_False;
+    //             int larger = (a > b) ? a : b;
+                
+    //             System.out.println(" The larger integer is: " + larger);
+                
+    //         } // Scanner is automatically closed here
+    // 	} 
+    // }
+
+
+
+
+
+    //Write a program to calculate compound interest using formula A = P*(1 + r/n)^(n*t).
+    import java.util.Scanner;
     public class revision { 	
     	public static void main(String[] args) { 
-            // Best practice: Use try-with-resources to ensure Scanner is closed automatically
-            try (Scanner sc = new Scanner(System.in)) {
-        	
-                System.out.print(" Enter first integer: ");
-                int a = sc.nextInt();
-                
-                System.out.print(" Enter second integer: ");
-                int b = sc.nextInt();
-                
-                // Ternary Operator: (Condition) ? Value_if_True : Value_if_False;
-                int larger = (a > b) ? a : b;
-                
-                System.out.println(" The larger integer is: " + larger);
-                
-            } // Scanner is automatically closed here
+            Scanner sc = new Scanner(System.in);
+            
+            System.out.print(" Enter principal amount (P): ");
+            double P = sc.nextDouble();
+            
+            System.out.print(" Enter annual interest rate (r) in percentage: ");
+            double r = sc.nextDouble() / 100; // Convert percentage to decimal
+            
+            System.out.print(" Enter number of times interest is compounded per year (n): ");
+            int n = sc.nextInt();
+            
+            System.out.print(" Enter time in years (t): ");
+            double t = sc.nextDouble();
+            
+            // Compound Interest Formula: A = P * (1 + r/n)^(n*t)
+            double A = P * Math.pow((1 + r / n), (n * t));
+            
+            System.out.printf(" The amount after %.2f years is: %.2f%n", t, A);
+            
+            sc.close(); // Close the scanner to prevent resource leaks
     	} 
     }
