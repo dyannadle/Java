@@ -383,21 +383,51 @@
 
 
 //Write a program that uses final keyword to define a constant PI = 3.14159 and calculates circle area.
+// import java.util.Scanner;
+// public class revision { 	
+//     public static void main(String[] args) { 
+//         final double PI = 3.14159; // Define constant PI
+//         Scanner sc = new Scanner(System.in);
+        
+//         System.out.print(" Enter radius of the circle: ");
+//         // Read radius input from user
+//         double radius = sc.nextDouble();
+        
+//         // Calculate area using the formula: area = PI * r * r
+//         double area = PI * radius * radius;
+        
+//         System.out.printf(" The area of the circle with radius %.2f is: %.2f%n", radius, area);
+        
+//         sc.close(); // Close the scanner to prevent resource leaks
+//     } 
+// }
+
+
+
+
+
+
+// 🔁 Section 2: Control Flow (21–35)
+
+
+
+
+//Write a program to check if a given number is positive, negative, or zero using if-else.
 import java.util.Scanner;
-public class revision { 	
+public class revision { 
     public static void main(String[] args) { 
-        final double PI = 3.14159; // Define constant PI
         Scanner sc = new Scanner(System.in);
-        
-        System.out.print(" Enter radius of the circle: ");
-        double radius = sc.nextDouble();
-        
-        // Calculate area using the formula: area = PI * r * r
-        double area = PI * radius * radius;
-        
-        System.out.printf(" The area of the circle with radius %.2f is: %.2f%n", radius, area);
-        
-        sc.close(); // Close the scanner to prevent resource leaks
-    } 
-}
+        System.out.print(" Enter a number: ");
+        int num = sc.nextInt();
+        if(num > 0){
+         System.out.println(" The number is Positive ");
+        }
+        else if(num < 0){
+    System.out.println(" The number is Negative ");
+        }  
+        else{
+            System.out.println(" The number is Zero ");
+        }
+          } 
+     }
 
