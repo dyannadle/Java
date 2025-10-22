@@ -463,29 +463,29 @@
 
 
 //Write a program to print the first 10 natural numbers using a for loop.
-    // import java.util.Scanner; // Imports the Scanner class for user input (not strictly needed for this loop, but kept for consistency).
+    import java.util.Scanner; // Imports the Scanner class for user input (not strictly needed for this loop, but kept for consistency).
     
-    // public class revision { 	// Defines the public class.
-    // 	public static void main(String[] args) { // Main method execution starts here.
+    public class revision { 	// Defines the public class.
+    	public static void main(String[] args) { // Main method execution starts here.
             
-    //         // The try-with-resources block is removed since the Scanner is no longer used, simplifying the code.
+            // The try-with-resources block is removed since the Scanner is no longer used, simplifying the code.
 
-    //         System.out.println("The first 10 natural numbers are:"); // Print a header
+            System.out.println("The first 10 natural numbers are:"); // Print a header
             
-    //         // FIX: Use a standard 'for' loop structure.
-    //         // 1. Initialization: int i = 1 (start counter at 1)
-    //         // 2. Termination: i <= 10 (continue as long as i is 10 or less)
-    //         // 3. Increment: i++ (increase the counter by 1 after each iteration)
-    //         for (int i = 1; i <= 10; i++) {
+            // FIX: Use a standard 'for' loop structure.
+            // 1. Initialization: int i = 1 (start counter at 1)
+            // 2. Termination: i <= 10 (continue as long as i is 10 or less)
+            // 3. Increment: i++ (increase the counter by 1 after each iteration)
+            for (int i = 1; i <= 10; i++) {
                 
-    //             System.out.println(i); // Prints the current number, followed by a newline.
-    //         }
+                System.out.println(i); // Prints the current number, followed by a newline.
+            }
             
-    //         // Optional: Print a conclusion statement
-    //         System.out.println("Loop finished."); 
+            // Optional: Print a conclusion statement
+            System.out.println("Loop finished."); 
             
-    // 	} 
-    // }
+    	} 
+    }
 
 
 
@@ -497,41 +497,41 @@
 
 
 
-    import java.util.Scanner; // Imports the Scanner class for reading user input.
+    // import java.util.Scanner; // Imports the Scanner class for reading user input.
     
-    public class revision { 	// Defines the public class.
-    	public static void main(String[] args) { // Main method execution starts here.
+    // public class revision { 	// Defines the public class.
+    // 	public static void main(String[] args) { // Main method execution starts here.
             
-            // Use try-with-resources to automatically close the Scanner resource.
-            try (Scanner sc = new Scanner(System.in)) {
+    //         // Use try-with-resources to automatically close the Scanner resource.
+    //         try (Scanner sc = new Scanner(System.in)) {
                 
-                System.out.print("Enter the value of N (the number of natural numbers to sum): ");
+    //             System.out.print("Enter the value of N (the number of natural numbers to sum): ");
                 
-                // Read the user-defined limit N. InputMismatchException is handled by the catch block.
-                int N = sc.nextInt();
+    //             // Read the user-defined limit N. InputMismatchException is handled by the catch block.
+    //             int N = sc.nextInt();
                 
-                if (N < 1) {
-                    System.out.println("N must be a positive integer (greater than 0).");
-                    return; // Exit if N is invalid
-                }
+    //             if (N < 1) {
+    //                 System.out.println("N must be a positive integer (greater than 0).");
+    //                 return; // Exit if N is invalid
+    //             }
 
-                int sum = 0; // Variable initialized to store the accumulating sum
-                int i = 1;   // Loop counter, starts at the first natural number
+    //             int sum = 0; // Variable initialized to store the accumulating sum
+    //             int i = 1;   // Loop counter, starts at the first natural number
     
-                System.out.println("\nCalculating sum using a while loop...");
+    //             System.out.println("\nCalculating sum using a while loop...");
                 
-                // While loop: continues as long as the counter 'i' is less than or equal to N
-                while (i <= N) {
-                    sum = sum + i; // Add the current number 'i' to the total sum
-                    i++;           // Increment the counter to move to the next number
-                }
+    //             // While loop: continues as long as the counter 'i' is less than or equal to N
+    //             while (i <= N) {
+    //                 sum = sum + i; // Add the current number 'i' to the total sum
+    //                 i++;           // Increment the counter to move to the next number
+    //             }
     
-                System.out.println("The sum of the first " + N + " natural numbers is: " + sum); 
+    //             System.out.println("The sum of the first " + N + " natural numbers is: " + sum); 
             
-            } catch (java.util.InputMismatchException e) {
-                // Catch block to handle if the user enters text instead of a number for N.
-                System.out.println("Invalid input. Please run the program again and enter a whole number for N.");
-            }
-    	} 
-    }
+    //         } catch (java.util.InputMismatchException e) {
+    //             // Catch block to handle if the user enters text instead of a number for N.
+    //             System.out.println("Invalid input. Please run the program again and enter a whole number for N.");
+    //         }
+    // 	} 
+    // }
 
