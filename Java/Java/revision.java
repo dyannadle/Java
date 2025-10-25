@@ -697,7 +697,7 @@ import java.util.Scanner;
 public class revision{
     public static void main(String[]args ){
 Scanner sc = new Scanner(System.in);
- System.out.print("Enter the number of terms (N): ");
+ System.out.println("Enter the number of terms (N): ");
  int n = sc.nextInt();
  int a=0,b=1;
  System.out.println("Fibonacci Series up to " + n + " terms:");
