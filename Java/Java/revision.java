@@ -543,10 +543,11 @@ public class revision{
 public static void main(String [] args ){
 Scanner Sc = new Scanner(System.in) ;
 System.out.print("Enter the number for the multiplication table: ");
-int number = sc.nextInt();
+int number = Sc.nextInt();
 
-    if(int i=1; i=<10; i++ );
-    int result = number*i;
-    
+    for(int i=1; i<=10; i++ ){
+   int result = number * i;
+    System.out.println(number + " x " + i + " = " + result); 
+}
 }
 }
