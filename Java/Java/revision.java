@@ -693,38 +693,24 @@
 
 
 //Write a program that prints a Fibonacci series up to N terms.
-import java.util.Scanner;
-public class revision{
-    public static void main(String[]args ){
-Scanner sc = new Scanner(System.in);
- System.out.println("Enter the number of terms (N): ");
- int n = sc.nextInt();
- int a=0,b=1;
- System.out.println("Fibonacci Series up to " + n + " terms:");
-  for (int i = 1; i <= n; i++) {
-            System.out.print(a + " ");
-            int next = a + b;
-            a = b;
-            b = next;
-        }
+// import java.util.Scanner;
+// public class revision{
+//     public static void main(String[]args ){
+// Scanner sc = new Scanner(System.in);
+//  System.out.println("Enter the number of terms (N): ");
+//  int n = sc.nextInt();
+//  int a=0,b=1;
+//  System.out.println("Fibonacci Series up to " + n + " terms:");
+//   for (int i = 1; i <= n; i++) {
+//             System.out.print(a + " ");
+//             int next = a + b;
+//             a = b;
+//             b = next;
+//         }
 
-        sc.close();
-    }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         sc.close();
+//     }
+//     }
 
 
 
@@ -732,5 +718,31 @@ Scanner sc = new Scanner(System.in);
 
 
 //Write a program to reverse digits of a number using a while loop.
+import java.util.Scanner;
+
+public class revision {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();   // Input number
+        int original = num;       // Store original number
+        int reversed = 0;         // Variable to store reversed number
+
+        // Reverse logic using while loop
+        while (num != 0) {
+            int digit = num % 10;        // Extract last digit
+            reversed = reversed * 10 + digit; // Append digit to reversed number
+            num = num / 10;              // Remove last digit
+        }
+
+        System.out.println("Original number: " + original);
+        System.out.println("Reversed number: " + reversed);
+
+        sc.close();
+    }
+}
+
+
 
 // Write a program to find if a number is a prime number or not.
