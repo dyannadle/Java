@@ -673,18 +673,63 @@
 
 
 //Write a program to print the sum of even numbers between 1 and 100.
-public class revision {
-    public static void main(String[] args) {
-        int sum = 0; // variable to store the sum
+// public class revision {
+//     public static void main(String[] args) {
+//         int sum = 0; // variable to store the sum
+//        System.out.println("Even numbers between 1 and 100:");
+//         for (int i = 1; i <= 100; i++) {
+//             if (i % 2 == 0) {
+//                 System.out.println(i + " ");//this line prints alll the even numbers 
+//                 sum += i; // add even numbers
+//             }
+//         }
 
-        for (int i = 1; i <= 100; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i + " ");
-                sum += i; // add even numbers
-            }
+//         System.out.println("The sum of even numbers between 1 and 100 is: " + sum);
+//     }
+// }
+
+
+
+
+
+//Write a program that prints a Fibonacci series up to N terms.
+public class revision{
+    public static void main(String[]args ){
+Scanner sc = new Scanner(System.in);
+ System.out.print("Enter the number of terms (N): ");
+ int n = sc.nextInt();
+ int a=0,b=1;
+ System.out.println("Fibonacci Series up to " + n + " terms:");
+  for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
         }
 
-        System.out.println("The sum of even numbers between 1 and 100 is: " + sum);
+        sc.close();
     }
-}
+    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Write a program to reverse digits of a number using a while loop.
+
+// Write a program to find if a number is a prime number or not.
