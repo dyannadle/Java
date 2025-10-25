@@ -693,6 +693,7 @@
 
 
 //Write a program that prints a Fibonacci series up to N terms.
+import java.util.Scanner;
 public class revision{
     public static void main(String[]args ){
 Scanner sc = new Scanner(System.in);
