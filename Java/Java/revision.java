@@ -645,18 +645,14 @@
 //     }
 
 
-
-
-    import java.util.Arrays;
-    import java.util.List;
-
-    public class revision {
-        public static void main(String[] args) {
-            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-            // Skip the first 3 elements
-            numbers.stream()
-                   .skip(2)
-                   .forEach(System.out::println);
+// Write a program that prints numbers 1–10, but stops when number = 7 using break.
+public class revision{
+    public static void main(String []args){
+        for (int i=1;i<=10;i++){
+            if(i==7){
+                break;
+            }
+            System.out.println(i);
         }
     }
+}
