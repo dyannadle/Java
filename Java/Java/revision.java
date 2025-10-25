@@ -718,31 +718,62 @@
 
 
 //Write a program to reverse digits of a number using a while loop.
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class revision {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+// public class revision {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int num = sc.nextInt();   // Input number
-        int original = num;       // Store original number
-        int reversed = 0;         // Variable to store reversed number
+//         System.out.print("Enter a number: ");
+//         int num = sc.nextInt();   // Input number
+//         int original = num;       // Store original number
+//         int reversed = 0;         // Variable to store reversed number
 
-        // Reverse logic using while loop
-        while (num != 0) {
-            int digit = num % 10;        // Extract last digit
-            reversed = reversed * 10 + digit; // Append digit to reversed number
-            num = num / 10;              // Remove last digit
-        }
+//         // Reverse logic using while loop
+//         while (num != 0) {
+//             int digit = num % 10;        // Extract last digit
+//             reversed = reversed * 10 + digit; // Append digit to reversed number
+//             num = num / 10;              // Remove last digit
+//         }
 
-        System.out.println("Original number: " + original);
-        System.out.println("Reversed number: " + reversed);
+//         System.out.println("Original number: " + original);
+//         System.out.println("Reversed number: " + reversed);
 
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
 
 
 
 // Write a program to find if a number is a prime number or not.
+import java.util.Scanner;
+
+public class revision{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        boolean isPrime = true; // assume number is prime
+
+        if (num <= 1) {
+            isPrime = false; // 0 and 1 are not prime
+        } else {
+            // check for factors from 2 to sqrt(num)
+            for (int i = 2; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    isPrime = false; // found a factor
+                    break;
+                }
+            }
+        }
+
+        // print result
+        if (isPrime)
+            System.out.println(num + " is a Prime Number.");
+        else
+            System.out.println(num + " is NOT a Prime Number.");
+
+        sc.close();
+    }
+}
