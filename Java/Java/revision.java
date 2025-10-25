@@ -607,26 +607,39 @@
 
 
 
-// Write a program to print all even numbers from 1 to 50 using a loop.
-// This program demonstrates printing even numbers up to a fixed limit (50).
+// // Write a program to print all even numbers from 1 to 50 using a loop.
+// // This program demonstrates printing even numbers up to a fixed limit (50).
 
-public class revision { 	// Defines the public class.
-	public static void main(String[] args) { // Main method execution starts here.
+// public class revision { 	// Defines the public class.
+// 	public static void main(String[] args) { // Main method execution starts here.
         
-        System.out.println("--- Even Numbers from 1 to 50 ---");
+//         System.out.println("--- Even Numbers from 1 to 50 ---");
         
-        // FIX: The loop variable 'i' must be declared with its type (int).
-        // This loop iterates from i=1 up to i=50.
-        for (int i = 1; i <= 50; i++) { 
+//         // FIX: The loop variable 'i' must be declared with its type (int).
+//         // This loop iterates from i=1 up to i=50.
+//         for (int i = 1; i <= 50; i++) { 
             
-            // Logic to check if a number is even: 
-            // The modulo operator (%) returns the remainder. If the remainder is 0, the number is even.
-            if (i % 2 == 0) {
-                System.out.println(i); 
-            }
-        } 
+//             // Logic to check if a number is even: 
+//             // The modulo operator (%) returns the remainder. If the remainder is 0, the number is even.
+//             if (i % 2 == 0) {
+//                 System.out.println(i); 
+//             }
+//         } 
         
-        System.out.println("\nProcess finished.");
-	} 
-}
+//         System.out.println("\nProcess finished.");
+// 	} 
+// }
 
+
+
+//Write a program that prints numbers from 1 to 10, but skips 5 using continue.
+public class revision{
+    public static void main(String[]args){
+            for (int i = 1; i <= 10; i++) {
+                if (i == 5) { // Skip the number 5
+                    continue;
+                }
+                System.out.println(i);
+            }
+        }
+    }
