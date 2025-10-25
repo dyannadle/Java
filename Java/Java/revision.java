@@ -675,9 +675,11 @@
 //Write a program to print the sum of even numbers between 1 and 100.
 public class revision{
 public static void main(String []args){
+    int sum=0;
     System.out.println("Even numbers ");
     for (int i=1; i<=100;i++ ){
         if (i%2==0){
+sum +=i;
             System.out.println("It is a Even Number");
         }else{
             System.out.println("It is a odd number");
