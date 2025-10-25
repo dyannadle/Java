@@ -559,48 +559,61 @@
 
 // Write a program to calculate factorial of a number using a for loop.
 
-    import java.util.InputMismatchException; // Imports class for handling non-numeric input.
-    import java.util.Scanner;                 // Imports the Scanner class for reading user input.
+    // import java.util.InputMismatchException; // Imports class for handling non-numeric input.
+    // import java.util.Scanner;                 // Imports the Scanner class for reading user input.
     
-    public class revision { 	// Defines the public class.
-    	public static void main(String[] args) { // Main method execution starts here.
+    // public class revision { 	// Defines the public class.
+    // 	public static void main(String[] args) { // Main method execution starts here.
             
-            // Use try-with-resources to automatically close the Scanner resource.
-            try (Scanner sc = new Scanner(System.in)) { 
+    //         // Use try-with-resources to automatically close the Scanner resource.
+    //         try (Scanner sc = new Scanner(System.in)) { 
                 
-                System.out.print("Enter a positive integer to calculate its factorial: ");
+    //             System.out.print("Enter a positive integer to calculate its factorial: ");
                 
-                // Read the number whose factorial is to be calculated.
-                int number = sc.nextInt();
+    //             // Read the number whose factorial is to be calculated.
+    //             int number = sc.nextInt();
                 
-                // Check for non-negative input
-                if (number < 0) {
-                    System.out.println("\nError: Factorial is only defined for non-negative integers.");
-                    return;
-                }
+    //             // Check for non-negative input
+    //             if (number < 0) {
+    //                 System.out.println("\nError: Factorial is only defined for non-negative integers.");
+    //                 return;
+    //             }
                 
-                // Use 'long' for the result because factorials (e.g., 20!) quickly exceed the capacity of a standard 'int'.
-                long factorial = 1; 
+    //             // Use 'long' for the result because factorials (e.g., 20!) quickly exceed the capacity of a standard 'int'.
+    //             long factorial = 1; 
                 
-                // Special case for 0! = 1
-                if (number == 0) {
-                    factorial = 1;
-                } else {
-                    // Loop starts from the given number and goes down to 1 (or starts from 1 up to the number).
-                    // We use the traditional descending loop for clearer calculation: N * (N-1) * ... * 1
-                    for (int i = number; i >= 1; i--) { 
-                        factorial = factorial * i; 
-                    } 
-                }
+    //             // Special case for 0! = 1
+    //             if (number == 0) {
+    //                 factorial = 1;
+    //             } else {
+    //                 // Loop starts from the given number and goes down to 1 (or starts from 1 up to the number).
+    //                 // We use the traditional descending loop for clearer calculation: N * (N-1) * ... * 1
+    //                 for (int i = number; i >= 1; i--) { 
+    //                     factorial = factorial * i; 
+    //                 } 
+    //             }
                 
-                System.out.println("\n--- Factorial Calculation ---");
-                System.out.println("The factorial of " + number + " (" + number + "!) is: " + factorial); 
+    //             System.out.println("\n--- Factorial Calculation ---");
+    //             System.out.println("The factorial of " + number + " (" + number + "!) is: " + factorial); 
                 
-                System.out.println("\nCalculation finished.");
+    //             System.out.println("\nCalculation finished.");
             
-            } catch (InputMismatchException e) {
-                // Catch block to handle if the user enters text instead of a number.
-                System.out.println("\nInvalid input. Please run the program again and enter a whole number.");
-            }
-    	} 
+    //         } catch (InputMismatchException e) {
+    //             // Catch block to handle if the user enters text instead of a number.
+    //             System.out.println("\nInvalid input. Please run the program again and enter a whole number.");
+    //         }
+    // 	} 
+    // }
+
+
+
+// Write a program to print all even numbers from 1 to 50 using a loop.
+public class revision{
+    public static void main(String[]args){
+        for (i=1;i<=50;i++){
+                            if (i % 2 == 0) {
+                        System.out.println(i); 
+                    }
+                } 
+        }
     }
