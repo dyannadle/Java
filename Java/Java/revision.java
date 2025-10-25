@@ -646,13 +646,43 @@
 
 
 // Write a program that prints numbers 1–10, but stops when number = 7 using break.
+// public class revision { 	// Defines the public class.
+// 	public static void main(String[] args) { // Main method execution starts here.
+        
+//         System.out.println("--- Printing 1-10, Breaking at 7 ---");
+        
+//         // Loop iterates from i=1 up to i=10
+//         for (int i = 1; i <= 10; i++) { 
+            
+//             // Check if the current number is 7
+//             if (i == 7) {
+//                 System.out.println("Condition met: i = 7. Stopping loop.");
+//                 break; // Halts the execution of the entire for loop immediately.
+//             }
+            
+//             System.out.println(i); // Prints the current number (1, 2, 3, 4, 5, 6)
+//         } 
+        
+//         System.out.println("\nProcess finished.");
+// 	} 
+// }
+
+
+
+
+
+
+//Write a program to print the sum of even numbers between 1 and 100.
 public class revision{
-    public static void main(String []args){
-        for (int i=1;i<=10;i++){
-            if(i==7){
-                break;
-            }
-            System.out.println(i);
+public static void main(String []args){
+    System.out.println("Even numbers ");
+    for (int i=1; i<=100;i++ ){
+        if (i%2==0){
+            System.out.println("It is a Even Number");
+        }else{
+            System.out.println("It is a odd number");
         }
-    }
+    } 
 }
+} 
+
