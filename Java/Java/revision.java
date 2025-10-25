@@ -463,29 +463,29 @@
 
 
 //Write a program to print the first 10 natural numbers using a for loop.
-    import java.util.Scanner; // Imports the Scanner class for user input (not strictly needed for this loop, but kept for consistency).
+    // import java.util.Scanner; // Imports the Scanner class for user input (not strictly needed for this loop, but kept for consistency).
     
-    public class revision { 	// Defines the public class.
-    	public static void main(String[] args) { // Main method execution starts here.
+    // public class revision { 	// Defines the public class.
+    // 	public static void main(String[] args) { // Main method execution starts here.
             
-            // The try-with-resources block is removed since the Scanner is no longer used, simplifying the code.
+    //         // The try-with-resources block is removed since the Scanner is no longer used, simplifying the code.
 
-            System.out.println("The first 10 natural numbers are:"); // Print a header
+    //         System.out.println("The first 10 natural numbers are:"); // Print a header
             
-            // FIX: Use a standard 'for' loop structure.
-            // 1. Initialization: int i = 1 (start counter at 1)
-            // 2. Termination: i <= 10 (continue as long as i is 10 or less)
-            // 3. Increment: i++ (increase the counter by 1 after each iteration)
-            for (int i = 1; i <= 10; i++) {
+    //         // FIX: Use a standard 'for' loop structure.
+    //         // 1. Initialization: int i = 1 (start counter at 1)
+    //         // 2. Termination: i <= 10 (continue as long as i is 10 or less)
+    //         // 3. Increment: i++ (increase the counter by 1 after each iteration)
+    //         for (int i = 1; i <= 10; i++) {
                 
-                System.out.println(i); // Prints the current number, followed by a newline.
-            }
+    //             System.out.println(i); // Prints the current number, followed by a newline.
+    //         }
             
-            // Optional: Print a conclusion statement
-            System.out.println("Loop finished."); 
+    //         // Optional: Print a conclusion statement
+    //         System.out.println("Loop finished."); 
             
-    	} 
-    }
+    // 	} 
+    // }
 
 
 
@@ -535,3 +535,18 @@
     // 	} 
     // }
 
+
+
+//Write a program to print the multiplication table of a given number.
+import java.util.Scanner;
+public class revision{
+public static void main(String [] args ){
+Scanner Sc = new Scanner(System.in) ;
+System.out.print("Enter the number for the multiplication table: ");
+int number = sc.nextInt();
+
+    if(int i=1; i=<10; i++ );
+    int result = number*i;
+    
+}
+}
