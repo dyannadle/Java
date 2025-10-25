@@ -633,13 +633,30 @@
 
 
 //Write a program that prints numbers from 1 to 10, but skips 5 using continue.
-public class revision{
-    public static void main(String[]args){
-            for (int i = 1; i <= 10; i++) {
-                if (i == 5) { // Skip the number 5
-                    continue;
-                }
-                System.out.println(i);
-            }
+// public class revision{
+//     public static void main(String[]args){
+//             for (int i = 1; i <= 10; i++) {
+//                 if (i == 5) { // Skip the number 5
+//                     continue;
+//                 }
+//                 System.out.println(i);
+//             }
+//         }
+//     }
+
+
+
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class revision {
+        public static void main(String[] args) {
+            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+            // Skip the first 3 elements
+            numbers.stream()
+                   .skip(2)
+                   .forEach(System.out::println);
         }
     }
