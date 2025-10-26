@@ -745,35 +745,77 @@
 
 
 
+
+
 // Write a program to find if a number is a prime number or not.
-import java.util.Scanner;
+// import java.util.Scanner;
+// public class revision{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a number: ");
+//         int num = sc.nextInt();
+//         boolean isPrime = true; // assume number is prime
+//         if (num <= 1) {
+//             isPrime = false; // 0 and 1 are not prime
+//         } else {
+//             // check for factors from 2 to sqrt(num)
+//             for (int i = 2; i <= num / 2; i++) {
+//                 if (num % i == 0) {
+//                     isPrime = false; // found a factor
+//                     break;
+//                 }
+//             }
+//         }
+//         // print result
+//         if (isPrime)
+//             System.out.println(num + " is a Prime Number.");
+//         else
+//             System.out.println(num + " is NOT a Prime Number.");
+//         sc.close();
+//     }
+// }
 
-public class revision{
+
+
+//Section 3: Arrays & Strings (36–50)
+
+
+
+
+//Write a program to store and print 5 integers using an array.
+public class revision {
+
+    /**
+     * Stores and prints 5 integers using a fixed-size array in Java.
+     * The array is a fundamental data structure for storing collections of
+     * the same data type.
+     */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        // 1. Array Declaration and Initialization
+        // We declare an integer array named 'numbers' and initialize it immediately
+        // with five integer values. Arrays are zero-indexed, meaning the first
+        // element is at index 0 and the last is at index 4 (since the size is 5).
+        int[] numbers = {15, 25, 35, 45, 55};
 
-        System.out.print("Enter a number: ");
-        int num = sc.nextInt();
-        boolean isPrime = true; // assume number is prime
+        System.out.println("--- Displaying Integers Stored in the Array (Size: " + numbers.length + ") ---");
+        System.out.println(" "); // Print a newline for better formatting
 
-        if (num <= 1) {
-            isPrime = false; // 0 and 1 are not prime
-        } else {
-            // check for factors from 2 to sqrt(num)
-            for (int i = 2; i <= num / 2; i++) {
-                if (num % i == 0) {
-                    isPrime = false; // found a factor
-                    break;
-                }
-            }
+        // 2. Printing Array Contents
+        // We use a standard 'for' loop to iterate from the first index (0)
+        // up to (but not including) the total length of the array.
+        for (int i = 0; i < numbers.length; i++) {
+            // Print the index (position) and the value stored at that position.
+            System.out.println("Element at Index [" + i + "]: " + numbers[i]);
         }
 
-        // print result
-        if (isPrime)
-            System.out.println(num + " is a Prime Number.");
-        else
-            System.out.println(num + " is NOT a Prime Number.");
+      System.out.println("\n--- Printing using Enhanced For Loop (For-Each) ---");
 
-        sc.close();
+        // Alternatively, use an enhanced 'for' loop (for-each loop) for simple iteration.
+        // This loop reads each 'value' directly from the 'numbers' array.
+        for (int value : numbers) {
+            System.out.println("Value: " + value);
+        }
     }
 }
+
+ 
