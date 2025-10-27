@@ -823,41 +823,155 @@
 
 
 //  Write a program to find the largest element in an array.
+// public class revision {
+
+//     /**
+//      * Finds the largest element within a fixed-size integer array.
+//      * This is done by iterating through the array and keeping track of the maximum
+//      * value encountered so far.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Array Declaration and Initialization
+//         // We use a sample array with mixed positive and negative numbers.
+//         int[] numbers = {45, 12, 88, 7, 95, 23, -5, 60};
+
+//         // 2. Initialize max value
+//         // We assume the first element of the array is the largest initially.
+//         int maxElement = numbers[0];
+
+//         System.out.println("The array elements are:");
+//         // Print all elements for clarity
+//         for (int number : numbers) {
+//             System.out.print(number + " ");
+//         }
+//         System.out.println("\n");
+
+//         // 3. Iterate and Compare
+//         // We start the loop from the second element (index 1) since we already
+//         // set the first element (index 0) as our initial maximum.
+//         for (int i = 1; i < numbers.length; i++) {
+//             // Check if the current element is greater than the current maxElement
+//             if (numbers[i] > maxElement) {
+//                 // If it is, update maxElement to this new, larger value
+//                 maxElement = numbers[i];
+//             }
+//         }
+
+//         // 4. Print the result
+//         System.out.println("The largest element in the array is: " + maxElement);
+//     }
+// }
+
+
+
+
+
+
+// Write a program to calculate the sum and average of array elements.
+
+
+
+
+// public class revision {
+
+//     /**
+//      * Calculates the sum and average of all elements within a fixed-size integer array.
+//      * The sum is calculated using a loop, and the average is calculated using
+//      * floating-point division to ensure precision.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Array Declaration and Initialization
+//         // We use a sample array with mixed positive and negative numbers.
+//         int[] numbers = {45, 12, 88, 7, 95, 23, -5, 60};
+
+//         // 2. Initialize variables for calculation
+//         // Using 'long' for sum is safer for larger arrays to prevent potential overflow.
+//         long sum = 0;
+//         int count = numbers.length;
+
+//         System.out.println("The array elements are:");
+//         // Print all elements for clarity
+//         for (int number : numbers) {
+//             System.out.print(number + " ");
+//         }
+//         System.out.println("\n");
+
+//         // 3. Calculate the Sum
+//         // Use an enhanced for loop (for-each) to easily iterate and sum all elements.
+//         for (int number : numbers) {
+//             sum += number;
+//         }
+
+//         // 4. Calculate the Average
+//         // Ensure floating-point division by casting the sum to a double.
+//         double average = (double) sum / count;
+
+//         // 5. Print the results
+//         System.out.println("--- Calculation Results ---");
+//         System.out.println("Total Sum of elements: " + sum);
+//         // Using printf to format the average to two decimal places
+//         System.out.printf("Average of elements: %.2f\n", average);
+//     }
+// }
+
+
+
+
+// Write a program to copy one array into another.
 public class revision {
 
     /**
-     * Finds the largest element within a fixed-size integer array.
-     * This is done by iterating through the array and keeping track of the maximum
-     * value encountered so far.
+     * Demonstrates how to copy elements from one array (source) to another
+     * (destination) using a simple loop structure.
      */
     public static void main(String[] args) {
-        // 1. Array Declaration and Initialization
-        // We use a sample array with mixed positive and negative numbers.
-        int[] numbers = {45, 12, 88, 7, 95, 23, -5, 60};
+        // 1. Source Array Declaration and Initialization
+        int[] sourceArray = {10, 20, 30, 40, 50, 60};
+        System.out.println("--- Source Array (Original) ---");
+        printArray(sourceArray);
 
-        // 2. Initialize max value
-        // We assume the first element of the array is the largest initially.
-        int maxElement = numbers[0];
+        // 2. Destination Array Declaration
+        // The destination array MUST be initialized with the same size as the source.
+        // Array initialization reserves the necessary memory space.
+        int[] destinationArray = new int[sourceArray.length];
 
-        System.out.println("The array elements are:");
-        // Print all elements for clarity
-        for (int number : numbers) {
-            System.out.print(number + " ");
+        // 3. Array Copying using a loop
+        // We iterate through the source array and assign each element to the
+        // corresponding index in the destination array.
+        for (int i = 0; i < sourceArray.length; i++) {
+            destinationArray[i] = sourceArray[i];
         }
-        System.out.println("\n");
 
-        // 3. Iterate and Compare
-        // We start the loop from the second element (index 1) since we already
-        // set the first element (index 0) as our initial maximum.
-        for (int i = 1; i < numbers.length; i++) {
-            // Check if the current element is greater than the current maxElement
-            if (numbers[i] > maxElement) {
-                // If it is, update maxElement to this new, larger value
-                maxElement = numbers[i];
+        System.out.println("\n--- Destination Array (Copied) ---");
+        printArray(destinationArray);
+
+        // Optional: Verify that changes to the source don't affect the destination
+        // (This confirms a 'deep' copy of primitive values was performed, meaning
+        // the arrays occupy separate memory locations.)
+        sourceArray[0] = 999;
+        System.out.println("\n--- After changing sourceArray[0] to 999 ---");
+        System.out.print("Source Array now: ");
+        printArray(sourceArray);
+        System.out.print("Destination Array still: ");
+        printArray(destinationArray);
+    }
+
+    /**
+     * Helper method to print the contents of an integer array in a clear format.
+     */
+    public static void printArray(int[] arr) {
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (i < arr.length - 1) {
+                System.out.print(", ");
             }
         }
-
-        // 4. Print the result
-        System.out.println("The largest element in the array is: " + maxElement);
+        System.out.println("]");
     }
 }
+
+
+
+
+
