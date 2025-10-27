@@ -918,42 +918,100 @@
 
 
 // Write a program to copy one array into another.
+// public class revision {
+
+//     /**
+//      * Demonstrates how to copy elements from one array (source) to another
+//      * (destination) using a simple loop structure.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Source Array Declaration and Initialization
+//         int[] sourceArray = {10, 20, 30, 40, 50, 60};
+//         System.out.println("--- Source Array (Original) ---");
+//         printArray(sourceArray);
+
+//         // 2. Destination Array Declaration
+//         // The destination array MUST be initialized with the same size as the source.
+//         // Array initialization reserves the necessary memory space.
+//         int[] destinationArray = new int[sourceArray.length];
+
+//         // 3. Array Copying using a loop
+//         // We iterate through the source array and assign each element to the
+//         // corresponding index in the destination array.
+//         for (int i = 0; i < sourceArray.length; i++) {
+//             destinationArray[i] = sourceArray[i];
+//         }
+
+//         System.out.println("\n--- Destination Array (Copied) ---");
+//         printArray(destinationArray);
+
+//         // Optional: Verify that changes to the source don't affect the destination
+//         // (This confirms a 'deep' copy of primitive values was performed, meaning
+//         // the arrays occupy separate memory locations.)
+//         sourceArray[0] = 999;
+//         System.out.println("\n--- After changing sourceArray[0] to 999 ---");
+//         System.out.print("Source Array now: ");
+//         printArray(sourceArray);
+//         System.out.print("Destination Array still: ");
+//         printArray(destinationArray);
+//     }
+
+//     /**
+//      * Helper method to print the contents of an integer array in a clear format.
+//      */
+//     public static void printArray(int[] arr) {
+//         System.out.print("[");
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]);
+//             if (i < arr.length - 1) {
+//                 System.out.print(", ");
+//             }
+//         }
+//         System.out.println("]");
+//     }
+// }
+
+
+
+
+
+
+// Write a program to reverse an array.
 public class revision {
 
     /**
-     * Demonstrates how to copy elements from one array (source) to another
-     * (destination) using a simple loop structure.
+     * Demonstrates how to reverse the elements of an array in place
+     * using a two-pointer swapping technique.
      */
     public static void main(String[] args) {
-        // 1. Source Array Declaration and Initialization
-        int[] sourceArray = {10, 20, 30, 40, 50, 60};
-        System.out.println("--- Source Array (Original) ---");
-        printArray(sourceArray);
+        // 1. Array Declaration and Initialization
+        int[] originalArray = {10, 20, 30, 40, 50, 60};
+        
+        System.out.println("--- Original Array ---");
+        printArray(originalArray);
 
-        // 2. Destination Array Declaration
-        // The destination array MUST be initialized with the same size as the source.
-        // Array initialization reserves the necessary memory space.
-        int[] destinationArray = new int[sourceArray.length];
+        // 2. Array Reversal Logic (In-Place Swapping)
+        // Initialize two pointers: one at the start (index 0) and one at the end.
+        int start = 0;
+        int end = originalArray.length - 1;
 
-        // 3. Array Copying using a loop
-        // We iterate through the source array and assign each element to the
-        // corresponding index in the destination array.
-        for (int i = 0; i < sourceArray.length; i++) {
-            destinationArray[i] = sourceArray[i];
+        // Loop until the pointers cross or meet (start < end).
+        // For an array of even length (like 6), the loop runs 3 times (0,5 -> 1,4 -> 2,3).
+        // For an array of odd length (like 5), the loop runs 2 times (0,4 -> 1,3) and the middle element is left untouched.
+        while (start < end) {
+            // Swap elements at the 'start' and 'end' indices using a temporary variable
+            int temp = originalArray[start];
+            originalArray[start] = originalArray[end];
+            originalArray[end] = temp;
+
+            // Move the pointers inward
+            start++;
+            end--;
         }
 
-        System.out.println("\n--- Destination Array (Copied) ---");
-        printArray(destinationArray);
-
-        // Optional: Verify that changes to the source don't affect the destination
-        // (This confirms a 'deep' copy of primitive values was performed, meaning
-        // the arrays occupy separate memory locations.)
-        sourceArray[0] = 999;
-        System.out.println("\n--- After changing sourceArray[0] to 999 ---");
-        System.out.print("Source Array now: ");
-        printArray(sourceArray);
-        System.out.print("Destination Array still: ");
-        printArray(destinationArray);
+        System.out.println("\n--- Reversed Array ---");
+        // The original array now holds the reversed sequence
+        printArray(originalArray);
     }
 
     /**
@@ -970,6 +1028,7 @@ public class revision {
         System.out.println("]");
     }
 }
+
 
 
 
