@@ -977,40 +977,98 @@
 
 
 // Write a program to reverse an array.
+// public class revision {
+
+//     /**
+//      * Demonstrates how to reverse the elements of an array in place
+//      * using a two-pointer swapping technique.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Array Declaration and Initialization
+//         int[] originalArray = {10, 20, 30, 40, 50, 60};
+        
+//         System.out.println("--- Original Array ---");
+//         printArray(originalArray);
+
+//         // 2. Array Reversal Logic (In-Place Swapping)
+//         // Initialize two pointers: one at the start (index 0) and one at the end.
+//         int start = 0;
+//         int end = originalArray.length - 1;
+
+//         // Loop until the pointers cross or meet (start < end).
+//         // For an array of even length (like 6), the loop runs 3 times (0,5 -> 1,4 -> 2,3).
+//         // For an array of odd length (like 5), the loop runs 2 times (0,4 -> 1,3) and the middle element is left untouched.
+//         while (start < end) {
+//             // Swap elements at the 'start' and 'end' indices using a temporary variable
+//             int temp = originalArray[start];
+//             originalArray[start] = originalArray[end];
+//             originalArray[end] = temp;
+
+//             // Move the pointers inward
+//             start++;
+//             end--;
+//         }
+
+//         System.out.println("\n--- Reversed Array ---");
+//         // The original array now holds the reversed sequence
+//         printArray(originalArray);
+//     }
+
+//     /**
+//      * Helper method to print the contents of an integer array in a clear format.
+//      */
+//     public static void printArray(int[] arr) {
+//         System.out.print("[");
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]);
+//             if (i < arr.length - 1) {
+//                 System.out.print(", ");
+//             }
+//         }
+//         System.out.println("]");
+//     }
+// }
+
+
+
+
+// Write a program to sort an array in ascending order using any sorting logic (Bubble Sort preferred).
+
+
 public class revision {
 
     /**
-     * Demonstrates how to reverse the elements of an array in place
-     * using a two-pointer swapping technique.
+     * Demonstrates how to sort the elements of an array in ascending order
+     * using the Bubble Sort algorithm.
      */
     public static void main(String[] args) {
         // 1. Array Declaration and Initialization
-        int[] originalArray = {10, 20, 30, 40, 50, 60};
+        int[] originalArray = {50, 20, 40, 60, 10, 30};
         
         System.out.println("--- Original Array ---");
         printArray(originalArray);
 
-        // 2. Array Reversal Logic (In-Place Swapping)
-        // Initialize two pointers: one at the start (index 0) and one at the end.
-        int start = 0;
-        int end = originalArray.length - 1;
-
-        // Loop until the pointers cross or meet (start < end).
-        // For an array of even length (like 6), the loop runs 3 times (0,5 -> 1,4 -> 2,3).
-        // For an array of odd length (like 5), the loop runs 2 times (0,4 -> 1,3) and the middle element is left untouched.
-        while (start < end) {
-            // Swap elements at the 'start' and 'end' indices using a temporary variable
-            int temp = originalArray[start];
-            originalArray[start] = originalArray[end];
-            originalArray[end] = temp;
-
-            // Move the pointers inward
-            start++;
-            end--;
+        // 2. Bubble Sort Logic
+        int n = originalArray.length;
+        
+        // Outer loop: controls the number of passes (n-1 passes are needed)
+        for (int i = 0; i < n - 1; i++) {
+            // Inner loop: performs the comparison and swapping
+            // The largest 'i' elements are already at the end, so we check fewer elements each pass.
+            for (int j = 0; j < n - 1 - i; j++) {
+                
+                // Compare adjacent elements: if the current element is greater than the next one, swap them.
+                if (originalArray[j] > originalArray[j + 1]) {
+                    // Swap elements using a temporary variable
+                    int temp = originalArray[j];
+                    originalArray[j] = originalArray[j + 1];
+                    originalArray[j + 1] = temp;
+                }
+            }
         }
 
-        System.out.println("\n--- Reversed Array ---");
-        // The original array now holds the reversed sequence
+        System.out.println("\n--- Sorted Array (Ascending) ---");
+        // The original array now holds the sorted sequence
         printArray(originalArray);
     }
 
@@ -1029,6 +1087,25 @@ public class revision {
     }
 }
 
+
+
+// Write a program to search an element in an array using linear search.
+
+// Write a program to create a 2D array and print its elements in matrix form.
+
+// Write a program to find the sum of all elements in a 2D array.
+
+// Write a program to find the diagonal elements and their sum in a 3×3 matrix.
+
+// Write a program to count vowels and consonants in a given String.
+
+// Write a program to check if a given String is a palindrome (same forward and backward).
+
+// Write a program to compare two Strings ignoring case sensitivity.
+
+// Write a program to demonstrate StringBuilder — append your first name, space, and last name.
+
+// Write a program that reads a sentence and counts the number of words in it.
 
 
 
