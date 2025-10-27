@@ -783,39 +783,81 @@
 
 
 //Write a program to store and print 5 integers using an array.
+// public class revision {
+
+//     /**
+//      * Stores and prints 5 integers using a fixed-size array in Java.
+//      * The array is a fundamental data structure for storing collections of
+//      * the same data type.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Array Declaration and Initialization
+//         // We declare an integer array named 'numbers' and initialize it immediately
+//         // with five integer values. Arrays are zero-indexed, meaning the first
+//         // element is at index 0 and the last is at index 4 (since the size is 5).
+//         int[] numbers = {15, 25, 35, 45, 55};
+
+//         System.out.println("--- Displaying Integers Stored in the Array (Size: " + numbers.length + ") ---");
+//         System.out.println(" "); // Print a newline for better formatting
+
+//         // 2. Printing Array Contents
+//         // We use a standard 'for' loop to iterate from the first index (0)
+//         // up to (but not including) the total length of the array.
+//         for (int i = 0; i < numbers.length; i++) {
+//             // Print the index (position) and the value stored at that position.
+//             System.out.println("Element at Index [" + i + "]: " + numbers[i]);
+//         }
+
+//       System.out.println("\n--- Printing using Enhanced For Loop (For-Each) ---");
+
+//         // Alternatively, use an enhanced 'for' loop (for-each loop) for simple iteration.
+//         // This loop reads each 'value' directly from the 'numbers' array.
+//         for (int value : numbers) {
+//             System.out.println("Value: " + value);
+//         }
+//     }
+// }
+
+ 
+
+
+
+//  Write a program to find the largest element in an array.
 public class revision {
 
     /**
-     * Stores and prints 5 integers using a fixed-size array in Java.
-     * The array is a fundamental data structure for storing collections of
-     * the same data type.
+     * Finds the largest element within a fixed-size integer array.
+     * This is done by iterating through the array and keeping track of the maximum
+     * value encountered so far.
      */
     public static void main(String[] args) {
         // 1. Array Declaration and Initialization
-        // We declare an integer array named 'numbers' and initialize it immediately
-        // with five integer values. Arrays are zero-indexed, meaning the first
-        // element is at index 0 and the last is at index 4 (since the size is 5).
-        int[] numbers = {15, 25, 35, 45, 55};
+        // We use a sample array with mixed positive and negative numbers.
+        int[] numbers = {45, 12, 88, 7, 95, 23, -5, 60};
 
-        System.out.println("--- Displaying Integers Stored in the Array (Size: " + numbers.length + ") ---");
-        System.out.println(" "); // Print a newline for better formatting
+        // 2. Initialize max value
+        // We assume the first element of the array is the largest initially.
+        int maxElement = numbers[0];
 
-        // 2. Printing Array Contents
-        // We use a standard 'for' loop to iterate from the first index (0)
-        // up to (but not including) the total length of the array.
-        for (int i = 0; i < numbers.length; i++) {
-            // Print the index (position) and the value stored at that position.
-            System.out.println("Element at Index [" + i + "]: " + numbers[i]);
+        System.out.println("The array elements are:");
+        // Print all elements for clarity
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+        System.out.println("\n");
+
+        // 3. Iterate and Compare
+        // We start the loop from the second element (index 1) since we already
+        // set the first element (index 0) as our initial maximum.
+        for (int i = 1; i < numbers.length; i++) {
+            // Check if the current element is greater than the current maxElement
+            if (numbers[i] > maxElement) {
+                // If it is, update maxElement to this new, larger value
+                maxElement = numbers[i];
+            }
         }
 
-      System.out.println("\n--- Printing using Enhanced For Loop (For-Each) ---");
-
-        // Alternatively, use an enhanced 'for' loop (for-each loop) for simple iteration.
-        // This loop reads each 'value' directly from the 'numbers' array.
-        for (int value : numbers) {
-            System.out.println("Value: " + value);
-        }
+        // 4. Print the result
+        System.out.println("The largest element in the array is: " + maxElement);
     }
 }
-
- 
