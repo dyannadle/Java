@@ -1035,61 +1035,101 @@
 // Write a program to sort an array in ascending order using any sorting logic (Bubble Sort preferred).
 
 
-public class revision {
+// public class revision {
 
-    /**
-     * Demonstrates how to sort the elements of an array in ascending order
-     * using the Bubble Sort algorithm.
-     */
-    public static void main(String[] args) {
-        // 1. Array Declaration and Initialization
-        int[] originalArray = {50, 20, 40, 60, 10, 30};
+//     /**
+//      * Demonstrates how to sort the elements of an array in ascending order
+//      * using the Bubble Sort algorithm.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Array Declaration and Initialization
+//         int[] originalArray = {50, 20, 40, 60, 10, 30};
         
-        System.out.println("--- Original Array ---");
-        printArray(originalArray);
+//         System.out.println("--- Original Array ---");
+//         printArray(originalArray);
 
-        // 2. Bubble Sort Logic
-        int n = originalArray.length;
+//         // 2. Bubble Sort Logic
+//         int n = originalArray.length;
         
-        // Outer loop: controls the number of passes (n-1 passes are needed)
-        for (int i = 0; i < n - 1; i++) {
-            // Inner loop: performs the comparison and swapping
-            // The largest 'i' elements are already at the end, so we check fewer elements each pass.
-            for (int j = 0; j < n - 1 - i; j++) {
+//         // Outer loop: controls the number of passes (n-1 passes are needed)
+//         for (int i = 0; i < n - 1; i++) {
+//             // Inner loop: performs the comparison and swapping
+//             // The largest 'i' elements are already at the end, so we check fewer elements each pass.
+//             for (int j = 0; j < n - 1 - i; j++) {
                 
-                // Compare adjacent elements: if the current element is greater than the next one, swap them.
-                if (originalArray[j] > originalArray[j + 1]) {
-                    // Swap elements using a temporary variable
-                    int temp = originalArray[j];
-                    originalArray[j] = originalArray[j + 1];
-                    originalArray[j + 1] = temp;
-                }
-            }
-        }
+//                 // Compare adjacent elements: if the current element is greater than the next one, swap them.
+//                 if (originalArray[j] > originalArray[j + 1]) {
+//                     // Swap elements using a temporary variable
+//                     int temp = originalArray[j];
+//                     originalArray[j] = originalArray[j + 1];
+//                     originalArray[j + 1] = temp;
+//                 }
+//             }
+//         }
 
-        System.out.println("\n--- Sorted Array (Ascending) ---");
-        // The original array now holds the sorted sequence
-        printArray(originalArray);
-    }
+//         System.out.println("\n--- Sorted Array (Ascending) ---");
+//         // The original array now holds the sorted sequence
+//         printArray(originalArray);
+//     }
 
-    /**
-     * Helper method to print the contents of an integer array in a clear format.
-     */
-    public static void printArray(int[] arr) {
-        System.out.print("[");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
-            if (i < arr.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
-    }
-}
+//     /**
+//      * Helper method to print the contents of an integer array in a clear format.
+//      */
+//     public static void printArray(int[] arr) {
+//         System.out.print("[");
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]);
+//             if (i < arr.length - 1) {
+//                 System.out.print(", ");
+//             }
+//         }
+//         System.out.println("]");
+//     }
+// }
+
+
+
 
 
 
 // Write a program to search an element in an array using linear search.
+public class revision {
+
+    /**
+     * Demonstrates how to search for a specific element in an array
+     * using the Linear Search algorithm.
+     */
+    public static void main(String[] args) {
+        // 1. Array and Target Declaration
+        int[] dataArray = {10, 55, 30, 85, 45, 20, 70};
+        int targetElement = 45; // The value we want to find
+        int foundIndex = -1;    // Variable to store the index of the found element, -1 indicates not found
+
+        System.out.println("Array to search: [10, 55, 30, 85, 45, 20, 70]");
+        System.out.println("Target element: " + targetElement);
+        System.out.println("------------------------------");
+
+        // 2. Linear Search Logic
+        // Iterate through the array from the first element (index 0) to the last.
+        for (int i = 0; i < dataArray.length; i++) {
+            // Check if the current element matches the target.
+            if (dataArray[i] == targetElement) {
+                foundIndex = i; // Store the index
+                break;          // Stop searching immediately since the element is found
+            }
+        }
+
+        // 3. Print the Result
+        if (foundIndex != -1) {
+            System.out.println("Search successful!");
+            System.out.println("Element " + targetElement + " found at index: " + foundIndex);
+        } else {
+            System.out.println("Search unsuccessful.");
+            System.out.println("Element " + targetElement + " is not present in the array.");
+        }
+    }
+}
+
 
 // Write a program to create a 2D array and print its elements in matrix form.
 
