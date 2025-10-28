@@ -1242,55 +1242,55 @@
 
 
 
-public class revision {
+// public class revision {
 
-    /**
-     * Demonstrates how to declare a 3x3 matrix, print it, and then
-     * calculate the sum of its main diagonal elements (where row index == column index).
-     */
-    public static void main(String[] args) {
-        // 1. 3x3 Matrix Declaration and Initialization
-        int[][] matrix = {
-            {10, 20, 30},       // Row 0
-            {40, 50, 60},       // Row 1
-            {70, 80, 90}        // Row 2
-        };
+//     /**
+//      * Demonstrates how to declare a 3x3 matrix, print it, and then
+//      * calculate the sum of its main diagonal elements (where row index == column index).
+//      */
+//     public static void main(String[] args) {
+//         // 1. 3x3 Matrix Declaration and Initialization
+//         int[][] matrix = {
+//             {10, 20, 30},       // Row 0
+//             {40, 50, 60},       // Row 1
+//             {70, 80, 90}        // Row 2
+//         };
 
-        // Variable to store the total sum of the main diagonal elements
-        int diagonalSum = 0;
+//         // Variable to store the total sum of the main diagonal elements
+//         int diagonalSum = 0;
 
-        System.out.println("--- 3x3 Matrix Visualization ---");
+//         System.out.println("--- 3x3 Matrix Visualization ---");
 
-        // Print the matrix elements for visual confirmation
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + "\t");
-            }
-            System.out.println();
-        }
+//         // Print the matrix elements for visual confirmation
+//         for (int i = 0; i < matrix.length; i++) {
+//             for (int j = 0; j < matrix[i].length; j++) {
+//                 System.out.print(matrix[i][j] + "\t");
+//             }
+//             System.out.println();
+//         }
         
-        System.out.println("\n--- Finding Diagonal Elements and Sum ---");
+//         System.out.println("\n--- Finding Diagonal Elements and Sum ---");
 
-        // 2. Diagonal Summation Logic
-        // For the main diagonal of a square matrix (like 3x3), the row index (i) 
-        // and the column index (j) are always equal (i == j).
-        // We only need one loop since matrix[i][i] accesses the diagonal.
-        for (int i = 0; i < matrix.length; i++) {
+//         // 2. Diagonal Summation Logic
+//         // For the main diagonal of a square matrix (like 3x3), the row index (i) 
+//         // and the column index (j) are always equal (i == j).
+//         // We only need one loop since matrix[i][i] accesses the diagonal.
+//         for (int i = 0; i < matrix.length; i++) {
             
-            int element = matrix[i][i];
+//             int element = matrix[i][i];
             
-            // Add the current diagonal element to the sum
-            diagonalSum += element;
+//             // Add the current diagonal element to the sum
+//             diagonalSum += element;
             
-            // Print the element found
-            System.out.println("Diagonal Element at [" + i + "][" + i + "]: " + element);
-        }
+//             // Print the element found
+//             System.out.println("Diagonal Element at [" + i + "][" + i + "]: " + element);
+//         }
 
-        // 3. Print the Final Result
-        System.out.println("\nTotal Sum of Main Diagonal Elements: " + diagonalSum);
-        // (Expected Sum: 10 + 50 + 90 = 150)
-    }
-}
+//         // 3. Print the Final Result
+//         System.out.println("\nTotal Sum of Main Diagonal Elements: " + diagonalSum);
+//         // (Expected Sum: 10 + 50 + 90 = 150)
+//     }
+// }
 
 
 
@@ -1300,7 +1300,108 @@ public class revision {
 
 // Write a program to count vowels and consonants in a given String.
 
+
+
+// public class revision {
+
+//     /**
+//      * Program to count the number of vowels and consonants in a given String.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Input String and Counter Initialization
+//         String text = "Hello World! This is Java.";
+//         int vowelCount = 0;
+//         int consonantCount = 0;
+
+//         System.out.println("--- Vowel and Consonant Counter ---");
+//         System.out.println("Input String: \"" + text + "\"");
+
+//         // 2. Pre-process the string
+//         // Convert the string to lowercase to simplify the comparison logic.
+//         String lowerCaseText = text.toLowerCase();
+
+//         // 3. Iteration and Counting Logic
+//         // Loop through every character in the pre-processed string
+//         for (int i = 0; i < lowerCaseText.length(); i++) {
+//             char ch = lowerCaseText.charAt(i);
+
+//             // Check if the character is a letter (a-z)
+//             if (ch >= 'a' && ch <= 'z') {
+                
+//                 // Check if the letter is a vowel
+//                 if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+//                     vowelCount++;
+//                 } else {
+//                     // If it's a letter but not a vowel, it must be a consonant
+//                     consonantCount++;
+//                 }
+//             }
+//             // Non-alphabetic characters (spaces, punctuation, numbers) are ignored.
+//         }
+
+//         // 4. Print the Final Results
+//         System.out.println("\n--- Results ---");
+//         System.out.println("Total Vowels: " + vowelCount);
+//         System.out.println("Total Consonants: " + consonantCount);
+//         System.out.println("Total characters processed (a-z): " + (vowelCount + consonantCount));
+//     }
+// }
+
+
+
+
+
+
 // Write a program to check if a given String is a palindrome (same forward and backward).
+
+
+
+
+public class revision {
+
+    /**
+     * Program to check if a given String is a palindrome (reads the same 
+     * forwards and backwards), ignoring case, spaces, and punctuation.
+     */
+    public static void main(String[] args) {
+        // 1. Input String (Example of a palindrome: reads the same forwards and backwards)
+        String inputString = "Madam, I'm Adam";
+        
+        System.out.println("--- Palindrome Checker ---");
+        System.out.println("Input String: \"" + inputString + "\"");
+
+        // 2. Pre-process the string for comparison
+        // Remove non-alphanumeric characters (like spaces, commas, apostrophes, etc.)
+        // and convert the entire string to lowercase to ensure a case-insensitive check.
+        String cleanString = inputString.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        
+        System.out.println("Cleaned String for check: \"" + cleanString + "\"");
+
+        // 3. Palindrome Checking Logic (Two-pointer approach conceptually)
+        boolean isPalindrome = true;
+        int length = cleanString.length();
+        
+        // Iterate only up to the middle of the string
+        for (int i = 0; i < length / 2; i++) {
+            // Compare the character at position 'i' (from the start) 
+            // with the character at position 'length - 1 - i' (from the end)
+            if (cleanString.charAt(i) != cleanString.charAt(length - 1 - i)) {
+                isPalindrome = false;
+                break; // Stop immediately once a mismatch is found
+            }
+        }
+
+        // 4. Print the Final Result
+        System.out.println("\n--- Result ---");
+        if (isPalindrome) {
+            System.out.println("The string IS a palindrome.");
+        } else {
+            System.out.println("The string is NOT a palindrome.");
+        }
+    }
+}
+
+
 
 // Write a program to compare two Strings ignoring case sensitivity.
 
