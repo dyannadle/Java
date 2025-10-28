@@ -1357,59 +1357,196 @@
 
 
 
-public class revision {
+// public class revision {
 
-    /**
-     * Program to check if a given String is a palindrome (reads the same 
-     * forwards and backwards), ignoring case, spaces, and punctuation.
-     */
-    public static void main(String[] args) {
-        // 1. Input String (Example of a palindrome: reads the same forwards and backwards)
-        String inputString = "Madam, I'm Adam";
+//     /**
+//      * Program to check if a given String is a palindrome (reads the same 
+//      * forwards and backwards), ignoring case, spaces, and punctuation.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Input String (Example of a palindrome: reads the same forwards and backwards)
+//         String inputString = "Madam, I'm Adam";
         
-        System.out.println("--- Palindrome Checker ---");
-        System.out.println("Input String: \"" + inputString + "\"");
+//         System.out.println("--- Palindrome Checker ---");
+//         System.out.println("Input String: \"" + inputString + "\"");
 
-        // 2. Pre-process the string for comparison
-        // Remove non-alphanumeric characters (like spaces, commas, apostrophes, etc.)
-        // and convert the entire string to lowercase to ensure a case-insensitive check.
-        String cleanString = inputString.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+//         // 2. Pre-process the string for comparison
+//         // Remove non-alphanumeric characters (like spaces, commas, apostrophes, etc.)
+//         // and convert the entire string to lowercase to ensure a case-insensitive check.
+//         String cleanString = inputString.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         
-        System.out.println("Cleaned String for check: \"" + cleanString + "\"");
+//         System.out.println("Cleaned String for check: \"" + cleanString + "\"");
 
-        // 3. Palindrome Checking Logic (Two-pointer approach conceptually)
-        boolean isPalindrome = true;
-        int length = cleanString.length();
+//         // 3. Palindrome Checking Logic (Two-pointer approach conceptually)
+//         boolean isPalindrome = true;
+//         int length = cleanString.length();
         
-        // Iterate only up to the middle of the string
-        for (int i = 0; i < length / 2; i++) {
-            // Compare the character at position 'i' (from the start) 
-            // with the character at position 'length - 1 - i' (from the end)
-            if (cleanString.charAt(i) != cleanString.charAt(length - 1 - i)) {
-                isPalindrome = false;
-                break; // Stop immediately once a mismatch is found
-            }
-        }
+//         // Iterate only up to the middle of the string
+//         for (int i = 0; i < length / 2; i++) {
+//             // Compare the character at position 'i' (from the start) 
+//             // with the character at position 'length - 1 - i' (from the end)
+//             if (cleanString.charAt(i) != cleanString.charAt(length - 1 - i)) {
+//                 isPalindrome = false;
+//                 break; // Stop immediately once a mismatch is found
+//             }
+//         }
 
-        // 4. Print the Final Result
-        System.out.println("\n--- Result ---");
-        if (isPalindrome) {
-            System.out.println("The string IS a palindrome.");
-        } else {
-            System.out.println("The string is NOT a palindrome.");
-        }
-    }
-}
+//         // 4. Print the Final Result
+//         System.out.println("\n--- Result ---");
+//         if (isPalindrome) {
+//             System.out.println("The string IS a palindrome.");
+//         } else {
+//             System.out.println("The string is NOT a palindrome.");
+//         }
+//     }
+// }
+
+
+
+
 
 
 
 // Write a program to compare two Strings ignoring case sensitivity.
 
-// Write a program to demonstrate StringBuilder — append your first name, space, and last name.
+
+
+
+// public class revision {
+
+//     /**
+//      * Program to compare two strings for equality, ignoring the case 
+//      * of the characters using the standard String.equalsIgnoreCase() method.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Input Strings for Comparison
+//         String string1 = "Programming";
+//         String string2 = "pRoGrAmMiNg"; // Same letters, different case
+//         String string3 = "Algorithm";   // Different content
+
+//         System.out.println("--- Case-Insensitive String Comparison ---");
+        
+//         // 2. Comparison Logic 1: string1 vs string2
+//         System.out.println("\nComparing String 1 (\"" + string1 + "\") and String 2 (\"" + string2 + "\")... ");
+//         boolean result1 = string1.equalsIgnoreCase(string2);
+        
+//         if (result1) {
+//             System.out.println("Result: The strings are equal (ignoring case).");
+//         } else {
+//             System.out.println("Result: The strings are NOT equal.");
+//         }
+        
+//         // 3. Comparison Logic 2: string1 vs string3 (Expected to be false)
+//         System.out.println("\nComparing String 1 (\"" + string1 + "\") and String 3 (\"" + string3 + "\")... ");
+//         boolean result2 = string1.equalsIgnoreCase(string3);
+        
+//         if (result2) {
+//             System.out.println("Result: The strings are equal (ignoring case).");
+//         } else {
+//             System.out.println("Result: The strings are NOT equal.");
+//         }
+//     }
+// }
+
+
+
+
+
+// // Write a program to demonstrate StringBuilder — append your first name, space, and last name.
+
+
+
+
+// public class revision {
+
+//     /**
+//      * Program to demonstrate the use of the StringBuilder class to efficiently
+//      * append a first name, a space, and a last name.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Input Names
+//         String firstName = "Albert";
+//         String lastName = "Einstein";
+
+//         System.out.println("--- StringBuilder Demonstration ---");
+//         System.out.println("First Name: " + firstName);
+//         System.out.println("Last Name: " + lastName);
+
+//         // 2. Initialize StringBuilder
+//         // StringBuilder is used for mutable sequences of characters, offering 
+//         // better performance than using the '+' operator repeatedly on Strings.
+//         StringBuilder fullNameBuilder = new StringBuilder();
+
+//         // 3. Append the components
+//         fullNameBuilder.append(firstName);
+//         fullNameBuilder.append(" "); // Append a space
+//         fullNameBuilder.append(lastName);
+
+//         // 4. Convert to String and Print Result
+//         String fullName = fullNameBuilder.toString();
+
+//         System.out.println("\n--- Result ---");
+//         System.out.println("Full Name built using StringBuilder: " + fullName);
+//     }
+// }
+
+
+
+
+
+
+
 
 // Write a program that reads a sentence and counts the number of words in it.
 
 
+
+
+public class revision {
+
+    /**
+     * Program to read a sentence and count the number of words in it.
+     * It uses the String.split() method with a regex to count words based on spaces.
+     */
+    public static void main(String[] args) {
+        // 1. Input Sentence
+        String sentence = "Java programming is a powerful and versatile language.";
+        
+        System.out.println("--- Word Counter ---");
+        System.out.println("Input Sentence: \"" + sentence + "\"");
+
+        // 2. Word Counting Logic
+        // To count words, we split the string based on one or more whitespace characters.
+        // "\\s+" is a regular expression meaning "one or more whitespace characters (space, tab, newline)".
+        // The split method returns an array of strings, where each element is a word.
+        String[] words = sentence.split("\\s+");
+
+        // We check if the sentence is not empty (i.e., if it contains actual words).
+        int wordCount;
+        
+        if (sentence.trim().isEmpty()) {
+            // If the sentence is empty or only contains whitespace, the word count is 0.
+            wordCount = 0;
+        } else {
+            // Otherwise, the number of words is the length of the resulting array.
+            wordCount = words.length;
+        }
+
+        // 3. Print the Result
+        System.out.println("\n--- Result ---");
+        System.out.println("The sentence contains " + wordCount + " words.");
+        
+        // Optional: Print the words found
+        System.out.print("Words found: [");
+        for (int i = 0; i < words.length; i++) {
+            System.out.print("\"" + words[i] + "\"");
+            if (i < words.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+}
 
 
 
