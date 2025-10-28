@@ -1093,45 +1093,89 @@
 
 
 // Write a program to search an element in an array using linear search.
+// public class revision {
+
+//     /**
+//      * Demonstrates how to search for a specific element in an array
+//      * using the Linear Search algorithm.
+//      */
+//     public static void main(String[] args) {
+//         // 1. Array and Target Declaration
+//         int[] dataArray = {10, 55, 30, 85, 45, 20, 70};
+//         int targetElement = 45; // The value we want to find
+//         int foundIndex = -1;    // Variable to store the index of the found element, -1 indicates not found
+
+//         System.out.println("Array to search: [10, 55, 30, 85, 45, 20, 70]");
+//         System.out.println("Target element: " + targetElement);
+//         System.out.println("------------------------------");
+
+//         // 2. Linear Search Logic
+//         // Iterate through the array from the first element (index 0) to the last.
+//         for (int i = 0; i < dataArray.length; i++) {
+//             // Check if the current element matches the target.
+//             if (dataArray[i] == targetElement) {
+//                 foundIndex = i; // Store the index
+//                 break;          // Stop searching immediately since the element is found
+//             }
+//         }
+
+//         // 3. Print the Result
+//         if (foundIndex != -1) {
+//             System.out.println("Search successful!");
+//             System.out.println("Element " + targetElement + " found at index: " + foundIndex);
+//         } else {
+//             System.out.println("Search unsuccessful.");
+//             System.out.println("Element " + targetElement + " is not present in the array.");
+//         }
+//     }
+// }
+
+
+
+// Write a program to create a 2D array and print its elements in matrix form.
+
+
+
+
 public class revision {
 
     /**
-     * Demonstrates how to search for a specific element in an array
-     * using the Linear Search algorithm.
+     * Demonstrates how to declare, initialize, and print the elements
+     * of a two-dimensional (2D) array in a matrix format using nested loops.
      */
     public static void main(String[] args) {
-        // 1. Array and Target Declaration
-        int[] dataArray = {10, 55, 30, 85, 45, 20, 70};
-        int targetElement = 45; // The value we want to find
-        int foundIndex = -1;    // Variable to store the index of the found element, -1 indicates not found
+        // 1. 2D Array Declaration and Initialization
+        // This array represents a 3x4 matrix (3 rows and 4 columns).
+        int[][] matrix = {
+            {1, 2, 3, 4},       // Row 0
+            {5, 6, 7, 8},       // Row 1
+            {9, 10, 11, 12}     // Row 2
+        };
 
-        System.out.println("Array to search: [10, 55, 30, 85, 45, 20, 70]");
-        System.out.println("Target element: " + targetElement);
-        System.out.println("------------------------------");
+        System.out.println("--- 2D Array Printed in Matrix Form ---");
 
-        // 2. Linear Search Logic
-        // Iterate through the array from the first element (index 0) to the last.
-        for (int i = 0; i < dataArray.length; i++) {
-            // Check if the current element matches the target.
-            if (dataArray[i] == targetElement) {
-                foundIndex = i; // Store the index
-                break;          // Stop searching immediately since the element is found
+        // 2. Printing Logic using Nested Loops
+        // Outer loop iterates through the rows.
+        for (int i = 0; i < matrix.length; i++) {
+            
+            // Inner loop iterates through the columns (elements) in the current row.
+            // matrix[i].length gives the number of columns in the current row.
+            for (int j = 0; j < matrix[i].length; j++) {
+                
+                // Print the element followed by a tab (\t) for clean column separation
+                System.out.print(matrix[i][j] + "\t"); 
             }
-        }
-
-        // 3. Print the Result
-        if (foundIndex != -1) {
-            System.out.println("Search successful!");
-            System.out.println("Element " + targetElement + " found at index: " + foundIndex);
-        } else {
-            System.out.println("Search unsuccessful.");
-            System.out.println("Element " + targetElement + " is not present in the array.");
+            
+            // After all columns in a row are printed, print a newline to move to the next row
+            System.out.println();
         }
     }
 }
 
 
-// Write a program to create a 2D array and print its elements in matrix form.
+
+
+
 
 // Write a program to find the sum of all elements in a 2D array.
 
