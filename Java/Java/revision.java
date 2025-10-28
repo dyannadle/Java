@@ -1137,11 +1137,56 @@
 
 
 
+// public class revision {
+
+//     /**
+//      * Demonstrates how to declare, initialize, and print the elements
+//      * of a two-dimensional (2D) array in a matrix format using nested loops.
+//      */
+//     public static void main(String[] args) {
+//         // 1. 2D Array Declaration and Initialization
+//         // This array represents a 3x4 matrix (3 rows and 4 columns).
+//         int[][] matrix = {
+//             {1, 2, 3, 4},       // Row 0
+//             {5, 6, 7, 8},       // Row 1
+//             {9, 10, 11, 12}     // Row 2
+//         };
+
+//         System.out.println("--- 2D Array Printed in Matrix Form ---");
+
+//         // 2. Printing Logic using Nested Loops
+//         // Outer loop iterates through the rows.
+//         for (int i = 0; i < matrix.length; i++) {
+            
+//             // Inner loop iterates through the columns (elements) in the current row.
+//             // matrix[i].length gives the number of columns in the current row.
+//             for (int j = 0; j < matrix[i].length; j++) {
+                
+//                 // Print the element followed by a tab (\t) for clean column separation
+//                 System.out.print(matrix[i][j] + "\t"); 
+//             }
+            
+//             // After all columns in a row are printed, print a newline to move to the next row
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+// Write a program to find the sum of all elements in a 2D array.
+
+
+
 public class revision {
 
     /**
-     * Demonstrates how to declare, initialize, and print the elements
-     * of a two-dimensional (2D) array in a matrix format using nested loops.
+     * Demonstrates how to declare, initialize, and calculate the sum
+     * of all elements in a two-dimensional (2D) array using nested loops.
      */
     public static void main(String[] args) {
         // 1. 2D Array Declaration and Initialization
@@ -1152,23 +1197,38 @@ public class revision {
             {9, 10, 11, 12}     // Row 2
         };
 
-        System.out.println("--- 2D Array Printed in Matrix Form ---");
+        // Variable to store the total sum of all elements
+        int totalSum = 0;
 
-        // 2. Printing Logic using Nested Loops
+        System.out.println("--- Calculating the Sum of Elements in the 2D Array ---");
+        System.out.println("The array elements are:");
+
+        // Print the matrix elements for visual confirmation
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                // Print the element followed by a space
+                System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\n--- Summation Process ---");
+
+        // 2. Summation Logic using Nested Loops
         // Outer loop iterates through the rows.
         for (int i = 0; i < matrix.length; i++) {
             
             // Inner loop iterates through the columns (elements) in the current row.
-            // matrix[i].length gives the number of columns in the current row.
             for (int j = 0; j < matrix[i].length; j++) {
                 
-                // Print the element followed by a tab (\t) for clean column separation
-                System.out.print(matrix[i][j] + "\t"); 
+                // Add the current element to the total sum
+                totalSum += matrix[i][j];
             }
-            
-            // After all columns in a row are printed, print a newline to move to the next row
-            System.out.println();
         }
+
+        // 3. Print the Final Result
+        System.out.println("Total Sum of all elements: " + totalSum);
+        // (Expected Sum: 1+2+...+12 = 78)
     }
 }
 
@@ -1176,8 +1236,6 @@ public class revision {
 
 
 
-
-// Write a program to find the sum of all elements in a 2D array.
 
 // Write a program to find the diagonal elements and their sum in a 3×3 matrix.
 
