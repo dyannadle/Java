@@ -1182,53 +1182,113 @@
 
 
 
+// public class revision {
+
+//     /**
+//      * Demonstrates how to declare, initialize, and calculate the sum
+//      * of all elements in a two-dimensional (2D) array using nested loops.
+//      */
+//     public static void main(String[] args) {
+//         // 1. 2D Array Declaration and Initialization
+//         // This array represents a 3x4 matrix (3 rows and 4 columns).
+//         int[][] matrix = {
+//             {1, 2, 3, 4},       // Row 0
+//             {5, 6, 7, 8},       // Row 1
+//             {9, 10, 11, 12}     // Row 2
+//         };
+
+//         // Variable to store the total sum of all elements
+//         int totalSum = 0;
+
+//         System.out.println("--- Calculating the Sum of Elements in the 2D Array ---");
+//         System.out.println("The array elements are:");
+
+//         // Print the matrix elements for visual confirmation
+//         for (int i = 0; i < matrix.length; i++) {
+//             for (int j = 0; j < matrix[i].length; j++) {
+//                 // Print the element followed by a space
+//                 System.out.print(matrix[i][j] + "\t");
+//             }
+//             System.out.println();
+//         }
+        
+//         System.out.println("\n--- Summation Process ---");
+
+//         // 2. Summation Logic using Nested Loops
+//         // Outer loop iterates through the rows.
+//         for (int i = 0; i < matrix.length; i++) {
+            
+//             // Inner loop iterates through the columns (elements) in the current row.
+//             for (int j = 0; j < matrix[i].length; j++) {
+                
+//                 // Add the current element to the total sum
+//                 totalSum += matrix[i][j];
+//             }
+//         }
+
+//         // 3. Print the Final Result
+//         System.out.println("Total Sum of all elements: " + totalSum);
+//         // (Expected Sum: 1+2+...+12 = 78)
+//     }
+// }
+
+
+
+
+
+
+// Write a program to find the diagonal elements and their sum in a 3×3 matrix.
+
+
+
+
 public class revision {
 
     /**
-     * Demonstrates how to declare, initialize, and calculate the sum
-     * of all elements in a two-dimensional (2D) array using nested loops.
+     * Demonstrates how to declare a 3x3 matrix, print it, and then
+     * calculate the sum of its main diagonal elements (where row index == column index).
      */
     public static void main(String[] args) {
-        // 1. 2D Array Declaration and Initialization
-        // This array represents a 3x4 matrix (3 rows and 4 columns).
+        // 1. 3x3 Matrix Declaration and Initialization
         int[][] matrix = {
-            {1, 2, 3, 4},       // Row 0
-            {5, 6, 7, 8},       // Row 1
-            {9, 10, 11, 12}     // Row 2
+            {10, 20, 30},       // Row 0
+            {40, 50, 60},       // Row 1
+            {70, 80, 90}        // Row 2
         };
 
-        // Variable to store the total sum of all elements
-        int totalSum = 0;
+        // Variable to store the total sum of the main diagonal elements
+        int diagonalSum = 0;
 
-        System.out.println("--- Calculating the Sum of Elements in the 2D Array ---");
-        System.out.println("The array elements are:");
+        System.out.println("--- 3x3 Matrix Visualization ---");
 
         // Print the matrix elements for visual confirmation
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                // Print the element followed by a space
                 System.out.print(matrix[i][j] + "\t");
             }
             System.out.println();
         }
         
-        System.out.println("\n--- Summation Process ---");
+        System.out.println("\n--- Finding Diagonal Elements and Sum ---");
 
-        // 2. Summation Logic using Nested Loops
-        // Outer loop iterates through the rows.
+        // 2. Diagonal Summation Logic
+        // For the main diagonal of a square matrix (like 3x3), the row index (i) 
+        // and the column index (j) are always equal (i == j).
+        // We only need one loop since matrix[i][i] accesses the diagonal.
         for (int i = 0; i < matrix.length; i++) {
             
-            // Inner loop iterates through the columns (elements) in the current row.
-            for (int j = 0; j < matrix[i].length; j++) {
-                
-                // Add the current element to the total sum
-                totalSum += matrix[i][j];
-            }
+            int element = matrix[i][i];
+            
+            // Add the current diagonal element to the sum
+            diagonalSum += element;
+            
+            // Print the element found
+            System.out.println("Diagonal Element at [" + i + "][" + i + "]: " + element);
         }
 
         // 3. Print the Final Result
-        System.out.println("Total Sum of all elements: " + totalSum);
-        // (Expected Sum: 1+2+...+12 = 78)
+        System.out.println("\nTotal Sum of Main Diagonal Elements: " + diagonalSum);
+        // (Expected Sum: 10 + 50 + 90 = 150)
     }
 }
 
@@ -1237,7 +1297,6 @@ public class revision {
 
 
 
-// Write a program to find the diagonal elements and their sum in a 3×3 matrix.
 
 // Write a program to count vowels and consonants in a given String.
 
