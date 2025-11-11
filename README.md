@@ -207,6 +207,3 @@ Road Map to Java
 | Frameworks  | 10–12 weeks | Spring Boot + Tools             |
 | Mastery     | Ongoing     | Projects + System Design        |
 
----
-
-Would you like me to turn this into a **visual roadmap chart (flow diagram)** or a **study plan calendar (week-by-week)** next?
