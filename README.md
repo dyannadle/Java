@@ -207,3 +207,9 @@ Road Map to Java
 | Frameworks  | 10–12 weeks | Spring Boot + Tools             |
 | Mastery     | Ongoing     | Projects + System Design        |
 
+Sites For Reference
+
+https://www.tpointtech.com/java-tutorial
+https://www.tutorialspoint.com/java/index.htm
+https://www.geeksforgeeks.org/java/java/
+https://www.w3schools.com/java/
